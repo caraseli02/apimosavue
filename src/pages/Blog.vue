@@ -25,6 +25,7 @@
 import VueMarkdown from "vue-markdown";
 import truncate from "html-truncate";
 import dateFormat from "date-fns/format";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   metaInfo: {
@@ -36,7 +37,7 @@ export default {
   methods: {
     excerpt(node) {
       let excerpt = node.metaDescription ? node.metaDescription : node.body;
-      return truncate(excerpt, 120);
+      return truncate(documentToHtmlString(excerpt), 120);
     },
     dateFormat(date) {
       const thisDate = new Date(date);

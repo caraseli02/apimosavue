@@ -12,7 +12,7 @@
         :alt="$page.post.heroImage.title"
       />
     </div>
-    <vue-markdown class="post-body">{{ $page.post.body }}</vue-markdown>
+    <vue-markdown class="post-body">{{ changeData }}</vue-markdown>
     <div class="post-footer">
       <g-link class="return-link" to="/blog/" title="To blog overview"
         >👈 Back to blog overview</g-link
@@ -24,6 +24,7 @@
 <script>
 import { renderImage } from "../helpers/contentful";
 import VueMarkdown from "vue-markdown";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 
 export default {
   metaInfo() {
@@ -33,6 +34,12 @@ export default {
   },
   components: {
     VueMarkdown
+  },
+  computed : {
+    changeData: function () {
+      // `this` points to the vm instance
+      return documentToHtmlString(this.$page.post.body)
+    }
   },
   methods: {
     renderHeroImage(src) {
