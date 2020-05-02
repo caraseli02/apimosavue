@@ -1,38 +1,113 @@
 <template>
-  <div class="layout">
-    <Nav />
-    <transition name="fade" appear>
-      <main>
-        <slot />
-      </main>
-    </transition>
-    <footer class="footer">
-      Built by VladWeb
-      <nav class="footer-links">
-        <span class="powered-by">Powered by: </span>
-        <a href="https://www.contentful.com/" title="Contentful">Contentful</a>,
-        <a href="https://gridsome.org/" title="Gridsome">Gridsome</a> &amp;
-        <a href="https://www.netlify.com/" title="Netlify">Netlify</a>
-      </nav>
-    </footer>
-  </div>
+    <div class="layout">
+        <Nav/>
+        <transition name="fade" appear>
+            <main>
+                <slot/>
+            </main>
+        </transition>
+        <footer class="gradient">
+            <div class="container mx-auto  px-8">
+                <div class="relative -mt-12 lg:-mt-24">
+                    <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero">
+                                <g class="wave" fill="#f8fafc">
+                                    <path d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"></path>
+                                </g>
+                                <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF">
+                                    <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) ">
+                                        <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496"
+                                              opacity="0.100000001"></path>
+                                        <path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z"
+                                              opacity="0.100000001"></path>
+                                        <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z"
+                                              opacity="0.200000003"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="w-full flex flex-col md:flex-row justify-between">
+                    <div class="">
+                        <ul class="flex flex-row  justify-around list-reset mb-6">
+                            <li class="m-2 inline-block mr-2 md:block md:mr-0">
+                                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-orange-500">
+                                    <button class="bg-white hover:bg-gray-100 text-blue font-bold py-2 px-4 rounded-full w-10 flex justify-center items-center">
+                                        f
+                                    </button>
+                                </a>
+                            </li>
+                            <li class="m-2 inline-block mr-2 md:block md:mr-0">
+                                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-orange-500">
+                                    <button class="bg-white hover:bg-gray-100 text-pink-500 font-bold py-2 px-4 rounded-full  w-10 flex justify-center items-center">
+                                        <svg  height="30px" viewBox="0 0 511 511.9" width="50px" xmlns="http://www.w3.org/2000/svg"><path d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0"/><path d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0"/><path d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0"/></svg>
+                                    </button>
+                                </a>
+                            </li>
+                            <li class="m-2 inline-block mr-2 md:block md:mr-0">
+                                <a href="#" class="no-underline hover:underline text-gray-800 hover:text-orange-500">
+                                    <button class="bg-white hover:bg-gray-100 text-red-900 font-bold py-2 px-4 rounded-full  w-10 flex justify-center items-center">
+                                        G
+                                    </button>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="">
+                        <ul class="flex flex-col md:flex-row justify-around list-reset mb-6">
+                            <li class="m-2 inline-block mr-2 md:block md:mr-0">
+                                <a href="#"
+                                   class="no-underline hover:underline text-gray-800 hover:text-orange-500">Terms</a>
+                            </li>
+                            <li class="m-2 inline-block mr-2 md:block md:mr-0">
+                                <a href="#"
+                                   class="no-underline hover:underline text-gray-800 hover:text-orange-500">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="w-full flex justify-between px-8 pb-2 text-xs xl:text-sm">
+                <h2>Built by VladWeb</h2>
+                <nav class="footer-links">
+                    <span class="">Powered by: </span>
+                    <a href="https://www.contentful.com/" title="Contentful">Contentful</a>,
+                    <a href="https://gridsome.org/" title="Gridsome">Gridsome</a> &amp;
+                    <a href="https://www.netlify.com/" title="Netlify">Netlify</a>
+                </nav>
+            </div>
+
+        </footer>
+    </div>
 </template>
 
 <script>
-import Nav from "../components/Nav";
-export default {
-  components: {
-    Nav
-  }
-};
+    import Nav from "../components/Nav";
+
+    export default {
+        components: {
+            Nav
+        }
+    };
 </script>
 
-<style src="../main.css" />
+<style scoped>
+
+    .gradient {
+        background: linear-gradient(180deg, #fff 0%, #FFECF8 50%, #FFECF8 100%);
+    }
+
+</style>
+
 
 <static-query>
-query {
-  metadata {
+    query {
+    metadata {
     siteName
-  }
-}
+    }
+    }
 </static-query>

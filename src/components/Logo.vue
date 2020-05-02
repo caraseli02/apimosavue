@@ -1,5 +1,5 @@
 <template>
-<!--  <img class="logo" src="../assets/logoDS" />-->
+    <img class="lg:h-20 h-12 " src="../assets/icons/logoNegro.png"/>
 </template>
 a
 <style lang="scss" scoped>
