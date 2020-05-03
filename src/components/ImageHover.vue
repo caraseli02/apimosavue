@@ -8,15 +8,7 @@
 .image-wrapper {
   overflow: hidden;
 
-  & > * {
-    filter: brightness(50%);
-    transition: transform 0.25s, filter 0.15s ease;
-  }
 
-  &:hover > * {
-    transform: scale(1.1);
-    filter: brightness(100%);
-  }
 }
 </style>
 

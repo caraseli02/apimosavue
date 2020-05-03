@@ -11,8 +11,8 @@ module.exports = {
   siteDescription: "",
   siteUrl: "",
   icon: {
-    favicon: "./src/assets/android-chrome-192x192.png", // 96x96
-    touchicon: "./src/assets/android-chrome-512x512.png" // 180x180
+    favicon: "./src/assets/icons/android-icon-192x192.png", // 96x96
+    touchicon: "./src/assets/icons/android-icon-192x192.png" // 180x180
   },
   plugins: [contentful,
     {
