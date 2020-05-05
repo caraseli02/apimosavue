@@ -8,7 +8,6 @@
 .image-wrapper {
   overflow: hidden;
 
-
 }
 </style>
 

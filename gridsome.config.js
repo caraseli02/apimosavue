@@ -6,22 +6,22 @@
 const contentful = require("./plugin.confentful");
 
 module.exports = {
-  chainWebpack: config => config.mode("development"),
-  siteName: "",
-  siteDescription: "",
-  siteUrl: "",
-  icon: {
-    favicon: "./src/assets/icons/android-icon-192x192.png", // 96x96
-    touchicon: "./src/assets/icons/android-icon-192x192.png" // 180x180
-  },
-  plugins: [contentful,
-    {
-      use: 'gridsome-plugin-tailwindcss',
-      /**
-       * These are the default options. You don't need to set any options to get
-       * going. Seriously, you don't need to declare tailwind.config.js.
+    chainWebpack: config => config.mode("development"),
+    siteName: "",
+    siteDescription: "",
+    siteUrl: "",
+    icon: {
+        favicon: "./src/assets/icons/android-icon-192x192.png", // 96x96
+        touchicon: "./src/assets/icons/android-icon-192x192.png" // 180x180
+    },
+    plugins: [contentful,
+        {
+            use: 'gridsome-plugin-tailwindcss',
+            /**
+             * These are the default options. You don't need to set any options to get
+             * going. Seriously, you don't need to declare tailwind.config.js.
 
-       options: {
+             options: {
         tailwindConfig: './tailwind.config.js',
         purgeConfig: {},
         presetEnvConfig: {},
@@ -29,11 +29,28 @@ module.exports = {
         shouldImport: true,
         shouldTimeTravel: true
       }
-       */
-    }],
-  templates: {
-    ContentfulGallery: "/gallery/:slug",
-    ContentfulPost: "/blog/:slug",
-    ContentfulPage: "/:slug"
-  }
+             */
+        },
+        {
+            use: '@zefman/gridsome-source-instagram',
+            options: {
+                username: 'daiilystylee', // Instagram username
+                typeName: 'InstagramPhoto' // The GraphQL type you want the photos to be added under. Defaults to InstagramPhoto
+            }
+        },
+        {
+            use: 'gridsome-plugin-nprogress',
+            options: {
+                // Setting a color is optional.
+                color: '#0366d6',
+                // Disable the loading spinner.
+                showSpinner: false,
+            }
+        }
+    ],
+    templates: {
+        ContentfulGallery: "/gallery/:slug",
+        ContentfulPost: "/blog/:slug",
+        ContentfulPage: "/:slug"
+    }
 };

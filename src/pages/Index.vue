@@ -7,23 +7,20 @@
         </section>
         <section class="bg-gray-100 py-8">
             <div class="container max-w-5xl mx-auto m-8">
-                <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Hola soy Daniela</h1>
+                <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Bienvenidos a
+                    DailyStyle</h1>
                 <div class="w-full mb-4">
                     <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
                 </div>
 
                 <div class="flex flex-wrap">
-                    <div class="w-5/6 sm:w-1/2 p-6">
-                        <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Este es mi blog personal</h3>
-                        <p class="text-gray-600 mb-8">Apasionada del mundo de la moda, este blog es un espacio,
-                            una parte de mi donde os enseño los looks que llevo día a día de ahí el nombre de Daily
-                            Style.
-                            También os enseño aquello que me inspira a la hora de vestirme,
-                            me encanta perderme por la red en búsqueda de las ultimas tendencias y nuevas inspiraciones.<br/><br/>
-
-                            Images from: <a class="text-orange-500 underline" href="https://undraw.co/">undraw.co</a>
+                    <div class="w-5/6 sm:w-1/2 p-6 flex justify-center items-start flex-col">
+                        <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Un blog de moda...</h3>
+                        <p class="text-gray-600 mb-8">Donde recopilo ideas, inspiración diaria,
+                            pensamientos y fotos de mi estilo personal. Mi blog le dará una idea de mis aventuras
+                            diarias con la moda. También es una forma de compartir alguna de mis cosas favoritas en la
+                            vida, la moda, inspiración , consejos de belleza y estilo.
                         </p>
-
                     </div>
                     <div class="w-full sm:w-1/2 p-6">
                         <svg class="w-full sm:h-64 mx-auto" viewBox="0 0 1177 598.5" xmlns="http://www.w3.org/2000/svg">
@@ -246,36 +243,91 @@
                             <circle cx="600.35" cy="480.68" r="11.968" fill="#ff6347"/>
                         </svg>
                     </div>
-                    <div class="w-full sm:w-1/2 p-6 mt-6">
+                    <div class="w-full sm:w-1/2 p-6 mt-6 flex justify-center items-start flex-col">
                         <div class="align-middle">
-                            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Lorem ipsum dolor sit
-                                amet</h3>
-                            <p class="text-gray-600 mb-8">Empece mi blog como un hobby, en una nueva experiencia para mí
+                            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Una galería de
+                                inspiraciones...</h3>
+                            <p class="text-gray-600 mb-8">Empece a crear mi galería de looks como un hobby, en una nueva
+                                experiencia para mí
                                 espero que os animéis a compartirla
                                 conmigo
                                 y formar parte de ella.<br/><br/>
-                                Images from: <a class="text-orange-500 underline"
-                                                href="https://undraw.co/">undraw.co</a></p>
+                            </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
+        <h3 class="flex justify-center items-end w-full text-5xl sm:text-6xl bg-gray-100 -mb-5 text-black ">INSTAGRAM</h3>
+        <article class="bg-black pb-10 pt-3">
+            <carousel-3d :width="187" :height="301" :space="200" :disable3d="true"  :clickable="false" :controls-visible="true">
+                <slide class="redondo" v-for="(node, i) in $page.allInstagramPhoto.edges" :index="i" :key="node.id">
+
+                    <g-image
+                            class="h-full object-cover rounded-lg"
+                            :src="node.node.display_url"
+                    />
+                </slide>
+            </carousel-3d>
+        </article>
     </Layout>
 </template>
 
 <script>
+    import {Carousel3d, Slide} from 'vue-carousel-3d';
+    import {getCoverImage, renderImage} from "../helpers/contentful";
+    import ImageHover from "../components/ImageHover";
+
     export default {
         metaInfo: {
             title: "A photography blog"
+        },
+        data() {
+            return {
+                slides: 5
+            }
+        },
+        components: {
+            Carousel3d,
+            Slide
+        },
+        methods: {
+            getCoverImage(node) {
+                return getCoverImage(node);
+            },
+            renderThumbnail(src) {
+                return renderImage({src, fit: "fill", w: 968, h: 968});
+            }
         }
     };
+
 </script>
 
 <style scoped>
     .gradient {
         background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
     }
+    .redondo{
+        border-radius: 15px;
+    }
 
 </style>
+
+<page-query>
+    query {
+        allInstagramPhoto {
+            edges {
+                node {
+                    display_url
+                    edge_media_to_caption {
+                        edges {
+                            node {
+                                text
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</page-query>
