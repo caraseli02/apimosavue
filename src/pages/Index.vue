@@ -5,7 +5,7 @@
                 <g-image src="../assets/img/desktop/bgmallorca@2x.jpg" class="w-full"/>
             </div>
         </section>
-        <section class="bg-gray-100 py-8">
+        <section class="py-8">
             <div class="container max-w-5xl mx-auto m-8">
                 <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Bienvenidos a
                     DailyStyle</h1>
@@ -15,8 +15,9 @@
 
                 <div class="flex flex-wrap">
                     <div class="w-5/6 sm:w-1/2 p-6 flex justify-center items-start flex-col">
-                        <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Un blog de moda...</h3>
-                        <p class="text-gray-600 mb-8">Donde recopilo ideas, inspiración diaria,
+                        <g-link class="gradientLinks" to="/blog"><h2 class="text-3xl text-gray-800 font-bold">Un blog de
+                            moda...</h2></g-link>
+                        <p class="text-gray-600 mb-8 mt-3">Donde recopilo ideas, inspiración diaria,
                             pensamientos y fotos de mi estilo personal. Mi blog le dará una idea de mis aventuras
                             diarias con la moda. También es una forma de compartir alguna de mis cosas favoritas en la
                             vida, la moda, inspiración , consejos de belleza y estilo.
@@ -245,9 +246,11 @@
                     </div>
                     <div class="w-full sm:w-1/2 p-6 mt-6 flex justify-center items-start flex-col">
                         <div class="align-middle">
-                            <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">Una galería de
-                                inspiraciones...</h3>
-                            <p class="text-gray-600 mb-8">Empece a crear mi galería de looks como un hobby, en una nueva
+                            <g-link class="gradientLinks" to="/galleries/">
+                                <h2 class="text-3xl text-gray-800 font-bold leading-none">Una galería de
+                                    inspiraciones...</h2>
+                            </g-link>
+                            <p class="text-gray-600 mb-8 mt-3">Empece a crear mi galería de looks como un hobby, en una nueva
                                 experiencia para mí
                                 espero que os animéis a compartirla
                                 conmigo
@@ -258,9 +261,10 @@
                 </div>
             </div>
         </section>
-        <h3 class="flex justify-center items-end w-full text-5xl sm:text-6xl bg-gray-100 -mb-5 text-black ">INSTAGRAM</h3>
-        <article class="bg-black pb-10 pt-3">
-            <carousel-3d :width="187" :height="301" :space="200" :disable3d="true"  :clickable="false" :controls-visible="true">
+        <h3 class=" flex justify-center items-end w-full text-5xl sm:text-6xl -mb-8 text-black "><a href="https://www.instagram.com/daiilystylee/">INSTAGRAM</a></h3>
+        <article class="gradientGallery w-full py-5 my-2">
+            <carousel-3d :width="187" :height="301" :space="200" :disable3d="true" :clickable="false"
+                         :controls-visible="true">
                 <slide class="redondo" v-for="(node, i) in $page.allInstagramPhoto.edges" :index="i" :key="node.id">
 
                     <g-image
@@ -276,15 +280,14 @@
 <script>
     import {Carousel3d, Slide} from 'vue-carousel-3d';
     import {getCoverImage, renderImage} from "../helpers/contentful";
-    import ImageHover from "../components/ImageHover";
 
     export default {
         metaInfo: {
-            title: "A photography blog"
+            title: "A DailyStyle blog"
         },
         data() {
             return {
-                slides: 5
+                slides: 7
             }
         },
         components: {
@@ -307,7 +310,19 @@
     .gradient {
         background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
     }
-    .redondo{
+
+    .gradientGallery {
+        background: #000000; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #434343, #000000); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    .gradientLinks:hover {
+        background-image: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ebd3ff, #ffffff);
+    }
+
+    .redondo {
         border-radius: 15px;
     }
 

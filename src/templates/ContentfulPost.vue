@@ -110,7 +110,7 @@
         computed: {
             changeData: function () {
                 // `this` points to the vm instance
-                return documentToHtmlString(this.$page.post.body)
+                return documentToHtmlString(this.$page.post.description)
             }
         },
         methods: {
@@ -401,6 +401,7 @@
             publishDate,
             metaDescription,
             body,
+            description,
             heroImage {
                 file {
                     url
