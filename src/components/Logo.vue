@@ -1,5 +1,5 @@
 <template>
-    <img class="lg:h-20 h-12 w-1/4" src="../assets/icons/logoNegro.png"/>
+    <img class="lg:h-26 lg:w-24 h-8 w-2/4" src="../assets/icons/logoNegro.png"/>
 </template>
 a
 <style>
