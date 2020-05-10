@@ -40,7 +40,7 @@
         </section>
         <h3 class=" flex justify-center items-end w-full text-5xl sm:text-6xl -mb-8 text-black "><a
                 href="https://www.instagram.com/daiilystylee/">INSTAGRAM</a></h3>
-        <!--        <article class="gradientGallery w-full py-5 my-2">
+                <article class="gradientGallery w-full py-5 my-2">
                     <ClientOnly>
                         <carousel-3d :width="187" :height="301" :space="200" :disable3d="true" :clickable="false"
                                      :controls-visible="true">
@@ -53,7 +53,7 @@
                             </slide>
                         </carousel-3d>
                     </ClientOnly>
-                </article>-->
+                </article>
     </Layout>
 </template>
 
@@ -70,7 +70,7 @@
             ProfilePage,
             Carousel3d: () =>
                 import ('vue-carousel-3d')
-                    .then(m => m.Carousel)
+                    .then(m => m.Carousel3d)
                     .catch(),
             Slide: () =>
                 import ('vue-carousel-3d')
