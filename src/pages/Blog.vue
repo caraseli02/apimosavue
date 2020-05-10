@@ -5,45 +5,51 @@
                 <li class="flex justify-around items-center h-full xs:h-12 overflow-hidden zaracolor w-full"
                     v-for="{ node } in $page.post.edges" :key="node.id">
                     <div class="flex-1 flex flex-col justify-center items-center">
-                        <div class="flex flex-col justify-center items-center">
-                            <h3 class="font-bold text-sm mb-2 w-3/4 m-auto text-center lg:text-4xl lg:w-2/3">
-                                <g-link :to="`blog/${node.slug}`"> {{ node.title }}</g-link>
-                            </h3>
-                            <vue-markdown class="text-gray-700 text-xs w-32 lg:w-2/3 m-auto text-center lg:text-xl">{{
-                                excerpt(node) }}
-                            </vue-markdown>
-                            <a class="w-1/4 h-auto lg:flex hidden"
-                               href="https://static.zara.net/photos///2020/I/0/1/p/2173/255/402/2/w/1120/2173255402_1_1_1.jpg?ts=1588675947042">
-                                <g-image class=""
-                                         src="https://static.e-stradivarius.net/5/photos3/2020/V/0/1/p/0475/001/041/0475001041_2_1_2.jpg?t=1575457702335"
-                                         alt="Image 5 of SHIRT WITH POCKET from Zara"">
-                                </g-image>
-                            </a>
-                        </div>
-                        <!--<div class="">
-                            <Tags class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2"
-                                  :tags="node.tags"/>
-                        </div>-->
-                        <!--<div class="flex items-center">
-                            <img class="w-10 h-10 mr-4" src="../assets/icons/logoNegro.png"
-                                 alt="DailyStyle fashion blog"/>
-                            <div class="text-sm">
-                                <p class="text-gray-900 leading-none">DS</p>
-                                <p class="text-gray-600">{{
-                                    dateFormat(node.publishDate)
-                                    }}</p>
+
+                        <g-link :to="`blog/${node.slug}`"><h3
+                                class="font-bold text-sm mb-2 w-3/4 m-auto text-center lg:text-4xl lg:w-2/3">
+                            {{ node.title }}
+                        </h3></g-link>
+                        <vue-markdown class="text-gray-700 text-xs w-32 lg:w-2/3 m-auto text-center lg:text-xl">{{
+                            excerpt(node) }}
+                        </vue-markdown>
+                        <article class=" w-full flex justify-around items-center flex">
+                            <div class="hidden sm:flex sm:w-22 lg:w-32 h-auto flex justify-around items-center"
+                                 v-for="(prendas, i) in node.prendas" :key="node.id">
+                                <a class=""
+                                   :href="prendas.aLink">
+                                    <g-image class="w-full h-auto object-contain "
+                                             :src="prendas.imgLink"
+                                             alt="Image 5 of SHIRT WITH POCKET from Zara">
+                                    </g-image>
+                                </a>
                             </div>
-                        </div>-->
+                        </article>
                     </div>
+                    <!--<div class="">
+                        <Tags class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2"
+                              :tags="node.tags"/>
+                    </div>-->
+                    <!--<div class="flex items-center">
+                        <img class="w-10 h-10 mr-4" src="../assets/icons/logoNegro.png"
+                             alt="DailyStyle fashion blog"/>
+                        <div class="text-sm">
+                            <p class="text-gray-900 leading-none">DS</p>
+                            <p class="text-gray-600">{{
+                                dateFormat(node.publishDate)
+                                }}</p>
+                        </div>
+                    </div>-->
+
                     <div class="flex-1 flex flex-col justify-center items-start">
                         <a href="" class="h-auto">
-                            <ImageHover width="50wv" height="50vh%">
-                                <g-image
-                                        class="h-full"
-                                        :src="renderThumbnail(getCoverImage(node).url)"
-                                        :alt="getCoverImage(node).title"
-                                />
-                            </ImageHover>
+
+                            <g-image
+                                    class="w-full h-auto"
+                                    :src="getCoverImage(node).url"
+                                    :alt="getCoverImage(node).title"
+                            />
+
                         </a>
                     </div>
                 </li>
@@ -101,8 +107,42 @@
         flex-direction: row-reverse;
     }
 
-    .zaracolor{
+    .zaracolor {
         background-color: #f0f0f0;
+    }
+
+    .carousel-open:checked + .carousel-item {
+        position: static;
+        opacity: 100;
+    }
+
+    .carousel-item {
+        -webkit-transition: opacity 0.6s ease-out;
+        transition: opacity 0.6s ease-out;
+    }
+
+    #carousel-1:checked ~ .control-1,
+    #carousel-2:checked ~ .control-2,
+    #carousel-3:checked ~ .control-3 {
+        display: block;
+    }
+
+    .carousel-indicators {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        z-index: 10;
+    }
+
+    #carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+    #carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+    #carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
+        color: #2b6cb0; /*Set to match the Tailwind colour you want the active one to be */
     }
 
 </style>
@@ -117,11 +157,16 @@
                     publishDate
                     metaDescription
                     body
+                    prendas{
+                        imgLink
+                        aLink
+                    }
                     heroImage{
                         file{
                             url
                         }
                     }
+
                 }
             }
         }
