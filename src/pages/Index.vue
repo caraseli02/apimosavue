@@ -17,23 +17,23 @@
                         </p>
                     </div>
                     <div class="w-full sm:w-1/2 ">
-                        <g-image
+                        <g-link to="/blog"><g-image
                                 class="w-5/6 sm:h-auto mx-auto"
                                 :srcset="$page.contentfulIndexMain.imgBloc1[0].secure_url"
                                 alt="dailystyle blog picture"
 
-                        />
+                        /></g-link>
                     </div>
                 </div>
 
                 <div class="flex flex-wrap flex-col-reverse sm:flex-row">
                     <div class="w-full sm:w-1/2">
-                        <g-image
+                        <g-link to="/galleries"><g-image
                                 class="w-5/6 sm:h-auto mx-auto"
                                 :srcset="$page.contentfulIndexMain.imgBloc2[0].secure_url"
                                 alt="dailystyle gallery picture"
 
-                        />
+                        /></g-link>
 
                     </div>
                     <div class="w-full sm:w-1/2 p-6 mt-6 flex justify-center items-start flex-col">

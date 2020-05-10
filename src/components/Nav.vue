@@ -8,7 +8,7 @@
             </g-link>
         </div>
 
-        <label for="menu-toggle" class="pointer-cursor md:hidden block">
+        <label for="menu-toggle" class="cursor-pointer md:hidden block p-3">
             <svg class="fill-current text-gray-900"
                  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                 <title>menu</title>
