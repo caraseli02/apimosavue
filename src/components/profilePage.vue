@@ -21,20 +21,20 @@
                                         class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center"
                                 >
                                     <div class="">
-                                        <img
+                                        <g-image
                                                 alt="..."
                                                 src="https://scontent-mad1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c0.180.1440.1440a/s640x640/95894175_2417251735250350_4946315891094207263_n.jpg?_nc_ht=scontent-mad1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=3dz-OlBqRe8AX87ajhL&oh=ff9de7e10c884366b0af83089d8c7f1e&oe=5EE2BC7E"
-                                                class="imgMaxW shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
+                                                class="imgMaxW shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-11 lg:-ml-16"
 
                                         />
                                     </div>
                                 </div>
                                 <div
-                                        class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center"
+                                        class="w-full lg:w-4/12 px-4  lg:order-3 lg:text-right lg:self-center"
                                 >
-                                    <div class="py-6 px-3 mt-32 sm:mt-0">
+                                    <div class="sm:py-6 px-3 mt-20 sm:mt-0 flex justify-center">
                                         <button
-                                                class="bg-gray-500 active:bg-black uppercase text-pink-200 font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1"
+                                                class="flow justify-center items-center bg-gray-500 active:bg-black uppercase text-pink-200 font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1"
                                                 type="button"
                                                 style="transition: all 0.15s ease 0s;"
                                         >
@@ -65,7 +65,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="text-center my-6">
+                            <div class="text-center">
                                 <h1
                                         class="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2"
                                 >
