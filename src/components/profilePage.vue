@@ -2,33 +2,12 @@
     <div>
         <Nav/>
         <section class="profile-page">
-            <article class="relative block" style="height: 500px;">
-                <div
-                        class="absolute top-0 w-full h-full bg-center bg-cover bgImage"
-                >
-                    <span
-                            id="blackOverlay"
-                            class="w-full h-full absolute opacity-50 bg-black"
-                    ></span>
-                </div>
-                <div
-                        class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-                        style="height: 70px; transform: translateZ(0px);"
-                >
-                    <svg
-                            class="absolute bottom-0 overflow-hidden"
-                            xmlns="http://www.w3.org/2000/svg"
-                            preserveAspectRatio="none"
-                            version="1.1"
-                            viewBox="0 0 2560 100"
-                            x="0"
-                            y="0"
+            <article class="relative block s500">
+                <div class="absolute top-0 w-full h-full bg-center bg-cover bgImage">
+                    <span id="blackOverlay"
+                          class="w-full h-full absolute opacity-50 bg-black"
                     >
-                        <polygon
-                                class="text-gray-300 fill-current"
-                                points="2560 0 2560 100 0 100"
-                        ></polygon>
-                    </svg>
+                    </span>
                 </div>
             </article>
             <section class="relative py-16 bg-white">
@@ -45,8 +24,8 @@
                                         <img
                                                 alt="..."
                                                 src="https://scontent-mad1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/c0.180.1440.1440a/s640x640/95894175_2417251735250350_4946315891094207263_n.jpg?_nc_ht=scontent-mad1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=3dz-OlBqRe8AX87ajhL&oh=ff9de7e10c884366b0af83089d8c7f1e&oe=5EE2BC7E"
-                                                class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
-                                                style="max-width: 150px;"
+                                                class="imgMaxW shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
+
                                         />
                                     </div>
                                 </div>
@@ -93,6 +72,9 @@
                                     Bienvenidos a
                                     DailyStyle
                                 </h1>
+                                <div class="w-full mb-4">
+                                    <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+                                </div>
                                 <!--                                <div class="mb-2 text-gray-700 mt-10">
                                                                     <i class="fas fa-briefcase mr-2 text-lg text-gray-500"></i
                                                                     >Zara - Creative Tim Officer
@@ -122,7 +104,18 @@
 </script>
 
 <style scoped>
- .bgImage {
-     background-image: url("../assets/img/desktop/fondoBlog.jpg");
- }
+    .imgMaxW {
+        max-width: 150px;
+    }
+    .gradient {
+        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    }
+
+    .bgImage {
+        background-image: url("../assets/img/desktop/fondoBlog.jpg");
+    }
+
+    .s500 {
+        height: 500px;
+    }
 </style>

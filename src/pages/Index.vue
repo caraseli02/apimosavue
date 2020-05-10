@@ -7,10 +7,6 @@
         </section>
         <section class="py-8">
             <div class="container max-w-5xl mx-auto m-8">
-                <div class="w-full mb-4">
-                    <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-                </div>
-
                 <div class="flex flex-wrap">
                     <div class="w-5/6 sm:w-1/2 p-6 flex justify-center items-start flex-col">
                         <g-link class="gradientLinks" to="/blog"><h2 class="text-3xl text-gray-800 font-bold">Un blog de
@@ -187,9 +183,6 @@
 </script>
 
 <style scoped>
-    .gradient {
-        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
-    }
 
     .gradientGallery {
         background: #000000; /* fallback for old browsers */
