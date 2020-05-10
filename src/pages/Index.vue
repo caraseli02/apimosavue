@@ -17,13 +17,22 @@
                         </p>
                     </div>
                     <div class="w-full sm:w-1/2 ">
-                        <g-image class="w-5/6 sm:h-auto mx-auto" :src="$page.contentfulIndexMain.imgBloc1[0].url" />
+                        <g-image
+                                class="w-5/6 sm:h-auto mx-auto"
+                                :src="$page.contentfulIndexMain.imgBloc1[0].secure_url"
+                                alt="dailystyle blog picture"
+                        />
                     </div>
                 </div>
 
                 <div class="flex flex-wrap flex-col-reverse sm:flex-row">
                     <div class="w-full sm:w-1/2 p-6 mt-6">
-                        <g-image class="w-5/6 sm:h-auto mx-auto" :src="$page.contentfulIndexMain.imgBloc2[0].url" />
+                        <g-image
+                                class="w-5/6 sm:h-auto mx-auto"
+                                :src="$page.contentfulIndexMain.imgBloc2[0].secure_url"
+                                alt="dailystyle gallery picture"
+                        />
+
                     </div>
                     <div class="w-full sm:w-1/2 p-6 mt-6 flex justify-center items-start flex-col">
                         <div class="align-middle">
@@ -49,6 +58,7 @@
                                 <g-image
                                         class="h-full object-cover rounded-lg"
                                         :src="node.node.display_url"
+                                        alt="dailystyle-instagram-images"
                                 />
                             </slide>
                         </carousel-3d>
