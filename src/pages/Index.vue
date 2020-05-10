@@ -24,7 +24,7 @@
                         </p>
                     </div>
                     <div class="w-full sm:w-1/2 fondoBlog">
-                        <g-image src="../assets/img/fotoBlog.png" height="390" width="300" fit="cover" />
+                        <g-image src="../assets/img/fotoBlog.png" height="390" width="300" fit="cover"/>
                     </div>
                 </div>
 
@@ -142,16 +142,18 @@
         <h3 class=" flex justify-center items-end w-full text-5xl sm:text-6xl -mb-8 text-black "><a
                 href="https://www.instagram.com/daiilystylee/">INSTAGRAM</a></h3>
         <article class="gradientGallery w-full py-5 my-2">
-            <carousel-3d :width="187" :height="301" :space="200" :disable3d="true" :clickable="false"
-                         :controls-visible="true">
-                <slide class="redondo" v-for="(node, i) in $page.allInstagramPhoto.edges" :index="i" :key="node.id">
+            <ClientOnly>
+                <carousel-3d :width="187" :height="301" :space="200" :disable3d="true" :clickable="false"
+                             :controls-visible="true">
+                    <slide class="redondo" v-for="(node, i) in $page.allInstagramPhoto.edges" :index="i" :key="node.id">
 
-                    <g-image
-                            class="h-full object-cover rounded-lg"
-                            :src="node.node.display_url"
-                    />
-                </slide>
-            </carousel-3d>
+                        <g-image
+                                class="h-full object-cover rounded-lg"
+                                :src="node.node.display_url"
+                        />
+                    </slide>
+                </carousel-3d>
+            </ClientOnly>
         </article>
     </Layout>
 </template>
@@ -160,13 +162,19 @@
     import {getCoverImage, renderImage} from "../helpers/contentful";
 
     export default {
+        name: 'Index',
         metaInfo: {
             title: "A DailyStyle blog"
         },
-        data() {
-            return {
-                slides: 7
-            }
+        components: {
+            Carousel3d: () =>
+                import ('vue-carousel-3d')
+                    .then(m => m.Carousel)
+                    .catch(),
+            Slide: () =>
+                import ('vue-carousel-3d')
+                    .then(m => m.Slide)
+                    .catch()
         },
         methods: {
             getCoverImage(node) {
@@ -200,7 +208,7 @@
         border-radius: 15px;
     }
 
-    .fondoBlog{
+    .fondoBlog {
         background-image: url("../assets/img/fondoBlog.svg");
         background-size: cover;
 

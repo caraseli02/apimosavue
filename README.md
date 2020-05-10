@@ -1,50 +1,5 @@
 # Gridsome Contentful example
 
-This repo is used to illustrate the article I wrote on [@Medium](https://medium.com/@joranquinten). There's some additional background information that doesn't add to a readable article, but is quite neccesary for a coherent project, so this is the main reason I created this repository. It is an extract of my photography website ([moving pixels](https://movingpixels.joranquinten.nl)) and you'll probably find some references here and there 😅
-
-Also, I think this covers the most basic needs for a static generated site (considering the Contentful, Netlify, Gridsome stack).
-
-This repository is based on the **default starter for Gridsome**, so I'm not going to repeat the instructions of getting that up and running, there's good docs on that on the [Gridsome website](https://gridsome.org/docs/#1-install-gridsome-cli-tool).
-
-## Contentful
-
-If you haven't set up a [Contentful space](https://www.contentful.com/sign-up/), go ahead and do so. You can add the following types to the Content model:
-
-### Gallery
-
-| Type         | Name        | Options                      |
-| ------------ | ----------- | ---------------------------- |
-| Text         | Title       | Mark as title field          |
-| Text         | Slug        | Unique field, appear as slug |
-| Number       | Sort order  |                              |
-| Media        | Hero Image  |                              |
-| Rich text    | Description |                              |
-| Media (many) | Media       |                              |
-
-### Page
-
-| Type      | Name             | Options                      |
-| --------- | ---------------- | ---------------------------- |
-| Text      | Title            | Mark as title field          |
-| Text      | Slug             | Unique field, appear as slug |
-| Rich text | Body             |                              |
-| Rich text | Meta Description |                              |
-
-### Post
-
-| Type         | Name             | Options                      |
-| ------------ | ---------------- | ---------------------------- |
-| Text         | Title            | Mark as title field          |
-| Text         | Slug             | Unique field, appear as slug |
-| Date & time  | Publish date     |                              |
-| Media        | Hero Image       |                              |
-| Rich text    | Body             |                              |
-| Rich text    | Meta description |                              |
-| Media (many) | Media            |                              |
-
-This is the minimum, but feel free to add (of modify) your own! Before you move to the Gridsome part, add some content (multiple items of each) to the CMS, so you can verify the workings while developing.
-
-The `<nav>` component on this repository assumes there's at least two **page**s which have the _slug_ values of `about` and `contact`.
 
 ## Gridsome
 
@@ -139,4 +94,10 @@ This is basically the workings of the project. Apart from the Contentful Image s
 
 This should help you in setting up a Gridsome / Netlify / Contentful stack, with more performant images than you'd get out of the box. I think this setup covers 80% of the default use cases for a website.
 
-Enjoy ✌️
+Enjoy ✌️ 
+
+Inspired From https://movingpixels.joranquinten.nl/
+
+
+Original GitHub  https://github.com/joranquinten/gridsome-contentful-netlify-example
+

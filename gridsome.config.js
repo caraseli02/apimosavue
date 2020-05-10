@@ -23,7 +23,14 @@ module.exports = {
              */
             options: {
                 tailwindConfig: './tailwind.config.js',
-                purgeConfig: {},
+                purgeConfig: {
+                    enabled: true,
+                    content: [
+                        './src/**/*.html',
+                        './src/**/*.vue',
+                        './src/**/*.jsx',
+                    ],
+                },
                 presetEnvConfig: {},
                 shouldPurge: true,
                 shouldImport: true,
@@ -49,7 +56,7 @@ module.exports = {
         }
     ],
     templates: {
-        ContentfulGallery: "/gallery/:slug",
+        // ContentfulGallery: "/gallery/:slug",
         ContentfulPost: "/blog/:slug",
         ContentfulPage: "/:slug"
     }
