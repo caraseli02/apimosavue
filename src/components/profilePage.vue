@@ -5,7 +5,7 @@
             <article class="relative block" style="height: 500px;">
                 <div
                         class="absolute top-0 w-full h-full bg-center bg-cover"
-                        style='background-image: url("http://res.cloudinary.com/daiilystylee/image/upload/c_scale,f_auto,h_1080,q_49/v1589122153/evan-bollag--u6M4DCy0Sw-unsplash_ymvzji.jpg");'
+                        style='background-image: url("https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2710&amp;q=80");'
                 >
           <span
                   id="blackOverlay"
