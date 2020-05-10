@@ -1,7 +1,7 @@
 <template>
-    <img class="lg:h-20 h-12 " src="../assets/icons/logoNegro.png"/>
+    <img class="lg:h-20 h-12 w-1/4" src="../assets/icons/logoNegro.png"/>
 </template>
 a
-<style lang="scss" scoped>
+<style>
 
 </style>

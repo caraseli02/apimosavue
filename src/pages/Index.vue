@@ -164,7 +164,7 @@
     export default {
         name: 'Index',
         metaInfo: {
-            title: "A DailyStyle blog"
+            title: "A DailyStyle modern blog"
         },
         components: {
             Carousel3d: () =>
