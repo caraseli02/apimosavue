@@ -1,5 +1,6 @@
 <template>
     <Layout class="">
+        <profile-page/>
         <section>
             <div class="container mx-auto flex flex-col items-center">
                 <!--                <g-image src="../assets/img/desktop/bgmallorca@2x.jpg" class="w-full"/>-->
@@ -58,6 +59,7 @@
 
 <script>
     import {getCoverImage, renderImage} from "../helpers/contentful";
+    import ProfilePage from "../components/profilePage";
 
     export default {
         name: 'Index',
@@ -65,6 +67,7 @@
             title: "A DailyStyle modern blog"
         },
         components: {
+            ProfilePage,
             Carousel3d: () =>
                 import ('vue-carousel-3d')
                     .then(m => m.Carousel)

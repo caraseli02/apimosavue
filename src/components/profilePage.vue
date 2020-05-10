@@ -1,6 +1,5 @@
 <template>
     <div>
-        <Nav/>
         <section class="profile-page">
             <article class="relative block s500">
                 <div class="absolute top-0 w-full h-full bg-center bg-cover bgImage">
@@ -32,7 +31,7 @@
                                 <div
                                         class="w-full lg:w-4/12 px-4  lg:order-3 lg:text-right lg:self-center"
                                 >
-                                    <div class="sm:py-6 px-3 mt-20 sm:mt-0 flex justify-center">
+                                    <div class="sm:py-6 px-3 mt-24 sm:mt-0 flex justify-center">
                                         <button
                                                 class="flow justify-center items-center bg-gray-500 active:bg-black uppercase text-pink-200 font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1"
                                                 type="button"
@@ -93,13 +92,9 @@
 </template>
 
 <script>
-    import Nav from "./Nav";
 
     export default {
         name: "profilePage",
-        components: {
-            Nav
-        }
     }
 </script>
 
