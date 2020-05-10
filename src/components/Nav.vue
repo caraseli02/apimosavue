@@ -19,11 +19,11 @@
 
         <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
             <nav>
-                <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-                    <li><g-link class="hover:shadow rounded-lg md:p-4 py-3 px-0 block" to="/blog">Blog</g-link></li>
-                    <li><g-link class="hover:shadow rounded-lg md:p-4 py-3 px-0 block" to="/galleries/">My Style</g-link></li>
+                <ul class="md:flex items-center justify-between text-base text-gray-700 p-4 md:pt-0">
+                    <li class="flex justify-center items-center"><g-link class="hover:shadow rounded-lg md:p-4 p-3 block" to="/blog">Blog</g-link></li>
+                    <li class="flex justify-center items-center"><g-link class="hover:shadow rounded-lg md:p-4 p-3 block" to="/galleries/">My Style</g-link></li>
 <!--                    <li><g-link class="md:p-4 py-3 px-0 block" to="/about">About</g-link></li>-->
-                    <li><g-link class="hover:shadow rounded-lg md:p-4 py-3 px-0 block" to="/contact">Contact</g-link></li>
+                    <li class="flex justify-center items-center"><g-link class="hover:shadow rounded-lg md:p-4 p-3 block" to="/contact">Contact</g-link></li>
                 </ul>
             </nav>
         </div>
