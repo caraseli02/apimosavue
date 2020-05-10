@@ -1,6 +1,9 @@
 <template>
     <div class="layout">
-        <Nav/>
+        <profile-page>
+            <Nav/>
+        </profile-page>
+
         <transition name="fade" appear>
             <main>
                 <slot/>
@@ -65,11 +68,12 @@
 </template>
 
 <script>
-    import Nav from "../components/Nav";
+
+    import ProfilePage from "../components/profilePage";
 
     export default {
         components: {
-            Nav
+            ProfilePage,
         }
     };
 </script>
