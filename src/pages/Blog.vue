@@ -66,7 +66,7 @@
 
     export default {
         metaInfo: {
-            title: "Blog"
+            title: "Fashion Blog"
         },
         components: {
             VueMarkdown,

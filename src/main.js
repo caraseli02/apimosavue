@@ -16,6 +16,7 @@ export default function (Vue, {router, head, isClient, isServer}) {
             name: 'description',
             content: 'My blog will give you an idea of ​​my daily fashion adventures. It is also a way to share some of my favorite things in life, fashion, inspiration, beauty tips and style.'
         },
+        {property: 'language', content: 'en-ES'},
         {property: 'og:title', content: "DailyStyle | Looks | Fashion | Moda | Lifestyle"},
         {property: 'og:site_name', content: 'dailystylelooks'},
         {property: 'og:url', content: 'https://dailystylelooks.com/'},
