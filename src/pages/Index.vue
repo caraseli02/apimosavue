@@ -77,7 +77,7 @@
     export default {
         name: 'Index',
         metaInfo: {
-            title: "A DailyStyle modern blog"
+            title: "DailyStyleLooks a blog about Fashion and Beauty "
         },
         components: {
             ProfilePage,
