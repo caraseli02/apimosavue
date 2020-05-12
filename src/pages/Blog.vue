@@ -20,7 +20,7 @@
                                    :href="prendas.aLink">
                                     <g-image class="w-full h-auto object-contain "
                                              :src="prendas.imgLink"
-                                             alt="Image 5 of SHIRT WITH POCKET from Zara">
+                                             alt="Image from Zara">
                                     </g-image>
                                 </a>
                             </div>
@@ -52,6 +52,11 @@
                     </div>
                 </li>
             </ul>
+            <Pager :info="$page.post.pageInfo"
+                   linkClass="pager__link px-3 py-1 mx-3 my-1"
+                   class="mt-4 inline-block w-full text-center flex justify-center items-center"
+                   range="2"
+            />
         </section>
     </Layout>
 </template>
@@ -63,6 +68,7 @@
     import {documentToHtmlString} from "@contentful/rich-text-html-renderer";
     import {getCoverImage, renderImage} from "../helpers/contentful";
     import ImageHover from "../components/ImageHover";
+    import {Pager} from 'gridsome'
 
     export default {
         metaInfo: {
@@ -70,7 +76,8 @@
         },
         components: {
             VueMarkdown,
-            ImageHover
+            ImageHover,
+            Pager
         },
         methods: {
             excerpt(node) {
@@ -87,7 +94,12 @@
             renderThumbnail(src) {
                 return renderImage({src, fit: "fill", w: 968, h: 968});
             }
-        }
+        },
+        watch: {
+            $route(to) {
+                excerpt(node)
+            },
+        },
     };
 </script>
 
@@ -109,11 +121,34 @@
         background-color: #f0f0f0;
     }
 
+    .pager__link {
+        color: #CABCE6;
+        text-align: center;
+        text-decoration: none;
+        padding: 0.25rem 0.5rem;
+        margin: 0.25rem 0.5rem;
+    }
+
+    .pager__link:hover:not(.active) {
+        background-color: #CABCE6;
+        border-radius: 15px;
+        color: #ffecf8;
+    }
+
+    .active {
+        background-color: #ffecf8;;
+        border-radius: 15px;
+    }
+
 </style>
 
 <page-query>
-    query Posts {
-        post: allContentfulPost(sortBy:"publishDate" order:DESC) {
+    query Posts($page: Int) {
+        post: allContentfulPost(sortBy:"publishDate" order:DESC perPage: 2, page: $page) @paginate {
+            pageInfo {
+                totalPages
+                currentPage
+            }
             edges {
                 node {
                     title
