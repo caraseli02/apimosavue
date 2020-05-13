@@ -3,18 +3,19 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-const contentful = require("./plugin.confentful");
+// const contentful = require("./plugin.confentful");
 
 module.exports = {
     chainWebpack: config => config.mode("development"),
-    siteName: "",
-    siteDescription: "",
+    siteName: "Apimosa",
+    siteDescription: "Pinturas y Recubrimientos",
     siteUrl: "",
     icon: {
-        favicon: "./src/assets/icons/logoBlanco.png", // 96x96
-        touchicon: "./src/assets/icons/logoBlanco.png" // 180x180
+        favicon: "./src/assets/icons/android-icon-96x96.png", // 96x96
+        touchicon: "./src/assets/icons/apple-icon-180x180.png" // 180x180
     },
-    plugins: [contentful,
+    plugins: [
+        // contentful,
         {
             use: 'gridsome-plugin-tailwindcss',
             /**
@@ -38,13 +39,13 @@ module.exports = {
             }
 
         },
-        {
+        /*{
             use: '@zefman/gridsome-source-instagram',
             options: {
                 username: 'daiilystylee', // Instagram username
                 typeName: 'InstagramPhoto' // The GraphQL type you want the photos to be added under. Defaults to InstagramPhoto
             }
-        },
+        },*/
         {
             use: 'gridsome-plugin-nprogress',
             options: {
@@ -56,8 +57,6 @@ module.exports = {
         }
     ],
     templates: {
-        // ContentfulGallery: "/gallery/:slug",
-        ContentfulPost: "/blog/:slug",
-        ContentfulPage: "/:slug"
+
     }
 };

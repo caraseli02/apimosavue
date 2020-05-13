@@ -1,173 +1,425 @@
 <template>
     <Layout>
-        <section class="w-full h-full mb-16 pb-16">
-            <ul id="revers" class="flex flex-col justify-around items-start">
-                <li class="flex justify-around items-center h-full xs:h-12 overflow-hidden zaracolor w-full"
-                    v-for="{ node } in $page.post.edges" :key="node.id">
-                    <div class="flex-1 flex flex-col justify-center items-center">
-
-                        <g-link :to="`blog/${node.slug}`"><h3
-                                class="font-bold text-sm mb-2 w-3/4 m-auto text-center lg:text-4xl lg:w-2/3">
-                            {{ node.title }}
-                        </h3></g-link>
-                        <vue-markdown class="text-gray-700 text-xs w-32 lg:w-2/3 m-auto text-center lg:text-xl">{{
-                            excerpt(node) }}
-                        </vue-markdown>
-                        <article class=" w-full flex justify-around items-center flex">
-                            <div class="hidden sm:flex sm:w-22 lg:w-32 h-auto flex justify-around items-center"
-                                 v-for="(prendas, i) in node.prendas" :key="node.id">
-                                <a class=""
-                                   :href="prendas.aLink">
-                                    <g-image class="w-full h-auto object-contain "
-                                             :src="prendas.imgLink"
-                                             alt="Image from Zara">
-                                    </g-image>
-                                </a>
+        <main class="magrin__conocenos gapConocenos">
+            <div class="logoMain">
+                <img src="../assets/img/logoBig.png" alt=""/>
+                <h4 class="title__servicios">
+                    Nuestros Servicios
+                </h4>
+            </div>
+            <!-- Slide Show A Pen By geekwen
+            https://codepen.io/geekwen/pen/QNxymm/  -->
+            <section class="outer-wrapper">
+                <div class="s-wrap container__servicios s-type-1" role="slider">
+                    <input
+                            type="radio"
+                            id="s-1"
+                            name="slider-control"
+                            checked="checked"
+                    />
+                    <input type="radio" id="s-2" name="slider-control"/>
+                    <input type="radio" id="s-3" name="slider-control"/>
+                    <input type="radio" id="s-4" name="slider-control"/>
+                    <input type="radio" id="s-5" name="slider-control"/>
+                    <input type="radio" id="s-6" name="slider-control"/>
+                    <input type="radio" id="s-7" name="slider-control"/>
+                    <input type="radio" id="s-8" name="slider-control"/>
+                    <input type="radio" id="s-9" name="slider-control"/>
+                    <input type="radio" id="s-10" name="slider-control"/>
+                    <ul class="s-content">
+                        <li class="servicios-item servicios-item-1">
+                            <div class="servicios-item__servicio">
+                                <h4 class="servicios-item__servicio__text">
+                                    Ingeniería Constructiva
+                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
+                                </h4>
+                                <!-- <div class="servicios-item__img">
+                                    <a
+                                            href="../assets/img/ingenieria1.jpg"
+                                            class="servicios-item__img__ingi"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/ingenieria2.jpg"
+                                            class="servicios-item__img__ingi"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/ingenieria3.jpg"
+                                            class="servicios-item__img__ingi"
+                                    ></a>
+                                </div> -->
                             </div>
-                        </article>
-                    </div>
-                    <!--<div class="">
-                        <Tags class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr-2"
-                              :tags="node.tags"/>
-                    </div>-->
-                    <!--<div class="flex items-center">
-                        <img class="w-10 h-10 mr-4" src="../assets/icons/logoNegro.png"
-                             alt="DailyStyle fashion blog"/>
-                        <div class="text-sm">
-                            <p class="text-gray-900 leading-none">DS</p>
-                            <p class="text-gray-600">{{
-                                dateFormat(node.publishDate)
-                                }}</p>
-                        </div>
-                    </div>-->
+                        </li>
+                        <li class="servicios-item servicios-item-2">
+                            <div class="servicios-item__servicio">
+                                <h4 class="servicios-item__servicio__text">
+                                    Trabajo de Protección Anticorrosiva
+                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
+                                </h4>
+                                <!-- <div class="servicios-item__img">
+                                    <a
+                                            href="../assets/img/Anticorrosiva1.jpg"
+                                            class="servicios-item__img__corro"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/Anticorrosiva2.jpg"
+                                            class="servicios-item__img__corro"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/works3.jpg"
+                                            class="servicios-item__img__link"
+                                    ></a>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-3">
+                            <div class="servicios-item__servicio">
+                                <h4 class="servicios-item__servicio__text">
+                                    Preparación de Superficies
+                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
+                                </h4>
+                                <!-- <div class="servicios-item__img">
+                                    <a
+                                            href="../assets/img/superficies1.jpg"
+                                            class="servicios-item__img__super"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/superficies2.jpg"
+                                            class="servicios-item__img__super"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/superficies3.jpg"
+                                            class="servicios-item__img__super"
+                                    ></a>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-4">
+                            <div class="servicios-item__servicio">
+                                <h4 class="servicios-item__servicio__text">
+                                    Trabajo de Protecciones Pasiva
+                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
+                                </h4>
+                                <!-- <div class="servicios-item__img">
+                                    <a
+                                            href="../assets/img/protecciones1.jpg"
+                                            class="servicios-item__img__pro"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/protecciones2.jpg"
+                                            class="servicios-item__img__pro"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/protecciones3.jpg"
+                                            class="servicios-item__img__pro"
+                                    ></a>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-5">
+                            <div class="servicios-item__servicio">
+                                <h4 class="servicios-item__servicio__text">
+                                    Patologías de Hormigones
+                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
+                                </h4>
+                                <!-- <div class="servicios-item__img">
+                                    <a
+                                            href="../assets/img/hormigones1.jpg"
+                                            class="servicios-item__img__horm"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/hormigones2.jpg"
+                                            class="servicios-item__img__horm"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/hormigones3.jpg"
+                                            class="servicios-item__img__horm"
+                                    ></a>
+                                </div> -->
+                            </div>
+                        </li>
 
-                    <div class="flex-1 flex flex-col justify-center items-start max-h-screen">
-                        <a href="" class="h-auto">
-                            <g-image
-                                    class="w-full h-auto"
-                                    :src="getCoverImage(node).url"
-                                    :alt="getCoverImage(node).title"
-                            />
-                        </a>
+                        <li class="servicios-item servicios-item-6">
+                            <div class="servicios-item__servicio">
+                                <h4 class="servicios-item__servicio__text">
+                                    Pavimentos Industriales
+                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
+                                </h4>
+                                <!-- <div class="servicios-item__img">
+                                    <a
+                                            href="../assets/img/pavimentos1.jpg"
+                                            class="servicios-item__img__indu"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/pavimentos2.jpg"
+                                            class="servicios-item__img__indu"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/pavimentos3.jpg"
+                                            class="servicios-item__img__indu"
+                                    ></a>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-7">
+                            <div class="servicios-item__servicio">
+                                <h4 class="servicios-item__servicio__text">
+                                    Pavimentos Decorativos
+                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
+                                </h4>
+                                <!-- <div class="servicios-item__img">
+                                    <a
+                                            href="../assets/img/decorativos1.jpg"
+                                            class="servicios-item__img__deco"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/decorativos2.jpg"
+                                            class="servicios-item__img__deco"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/decorativos3.jpg"
+                                            class="servicios-item__img__deco"
+                                    ></a>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-8">
+                            <div class="servicios-item__servicio">
+                                <h4 class="servicios-item__servicio__text">
+                                    Tratamiento de Impermeabilizaciones
+                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
+                                </h4>
+                                <!-- <div class="servicios-item__img">
+                                    <a
+                                            href="../assets/img/imper.jpg"
+                                            class="servicios-item__img__imper"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/imper2.jpg"
+                                            class="servicios-item__img__imper"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/imper3.jpg"
+                                            class="servicios-item__img__imper"
+                                    ></a>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-9">
+                            <div class="servicios-item__servicio">
+                                <h4 class="servicios-item__servicio__text">
+                                    Rehabilitación de Edificios
+                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
+                                </h4>
+                                <!-- <div class="servicios-item__img">
+                                    <a
+                                            href="../assets/img/edificios1.jpg"
+                                            class="servicios-item__img__edif"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/edificios2.jpg"
+                                            class="servicios-item__img__edif"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/edificios3.jpg"
+                                            class="servicios-item__img__edif"
+                                    ></a>
+                                </div> -->
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-10">
+                            <div class="servicios-item__servicio">
+                                <h4 class="servicios-item__servicio__text">
+                                    Inyecciones
+                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
+                                </h4>
+                                <!-- <div class="servicios-item__img">
+                                    <a
+                                            href="../assets/img/inect1.jpg"
+                                            class="servicios-item__img__inect"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/inect2.jpg"
+                                            class="servicios-item__img__inect"
+                                    ></a>
+                                    <a
+                                            href="../assets/img/inect3.jpg"
+                                            class="servicios-item__img__inect"
+                                    ></a>
+                                </div> -->
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="s-content__servicios">
+                        <li class="servicios-item servicios-item-description">
+                            <div class="servicios-item__servicio">
+                                <div class="servicios-item__servicio-description">
+                                    <h3 class="apimosa__servicios">Prescripciones
+                                        Técnicas</h3 class="apimosa__servicios">
+                                    <h3 class="apimosa__servicios">Diagnosis de Superficies</h3>
+                                    <h3 class="apimosa__servicios">Especificaciones de Nuevas Tecnologías</h3>
+                                    <h3 class="apimosa__servicios">Estudios y Seguimientos de Mantenimientos
+                                        Preventivos</h3>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-description">
+                            <div class="servicios-item__servicio">
+                                <article class="servicios-item__servicio-description">
+                                    <h3 class="apimosa__servicios">Puentes ,
+                                        Estructuras</h3 class="apimosa__servicios">
+                                    <h3 class="apimosa__servicios">Tuberías ,
+                                        Conductos</h3>
+                                    <h3 class="apimosa__servicios">Tanques ,
+                                        Aerogeneradores</h3>
+                                </article>
+                                </div>
+                        </li>
+                        <li class="servicios-item servicios-item-description">
+                            <div class="servicios-item__servicio">
+                                <article class="servicios-item__servicio-description">
+                                    <h3 class="apimosa__servicios">Chorro de Arena Fijo</h3 class="apimosa__servicios">
+                                    <h3 class="apimosa__servicios">Chorro de Arena Móvil</h3>
+                                    <h3 class="apimosa__servicios">Hidrolimpiezas</h3>
+                                </article>
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-description">
+                            <div class="servicios-item__servicio">
+                                <article class="servicios-item__servicio-description">
+                                    <h3 class="apimosa__servicios">Pinturas
+                                        Intumescentes</h3 class="apimosa__servicios">
+                                    <h3 class="apimosa__servicios">Mortero Ignífugo</h3>
+                                    <h3 class="apimosa__servicios">Sellado Intumescentes</h3>
+                                    <h3 class="apimosa__servicios">Sellado de Juntas Ignífugas</h3>
+                                </article>
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-description">
+                            <div class="servicios-item__servicio">
+                                <article class="servicios-item__servicio-description">
+                                    <h3 class="apimosa__servicios">Reparaciones de Hormigones</h3>
+                                    <h3 class="apimosa__servicios">Morteros y Resinas de Alta Resistencia</h3>
+                                    <h3 class="apimosa__servicios">Refuerzos Estructurales , Tratamientos
+                                        Preventivos</h3>
+                                    <h3 class="apimosa__servicios">Tratamientos de Fisuras y Grietas</h3>
+                                    <h3 class="apimosa__servicios">Protecciones Catódicas y Anódicas</h3>
+                                </article>
+                            </div>
+                        </li>
+
+                        <li class="servicios-item servicios-item-description">
+                            <div class="servicios-item__servicio">
+                                <article class="servicios-item__servicio-description">
+                                    <h3 class="apimosa__servicios">Mortero Cementoso , Mortero Cementoso-Epoxídico</h3>
+                                    <h3 class="apimosa__servicios">Mortero Epoxídico , Mortero Epoxídico-Conductivo</h3>
+                                    <h3 class="apimosa__servicios">Mortero Cementoso / Epoxídico de Fraguado Ultra
+                                        Rápido</h3>
+                                    <h3 class="apimosa__servicios">Sistemas Multicapas , Tratamientos Antipolvos</h3>
+                                    <h3 class="apimosa__servicios">Morteros de altas prestaciones físicas y
+                                        químicas</h3>
+                                </article>
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-description">
+                            <div class="servicios-item__servicio">
+                                <article class="servicios-item__servicio-description">
+                                    <h3 class="apimosa__servicios">Mortero Cementoso , Mortero Cementoso-Epoxídico</h3>
+                                    <h3 class="apimosa__servicios">Mortero Epoxídico , Mortero Epoxídico-Conductivo</h3>
+                                    <h3 class="apimosa__servicios">Mortero Epoxídico , Sistemas Multicapas</h3>
+                                    <h3 class="apimosa__servicios">Morteros Autonivelantes con Adición de Cuarzocolor,
+                                        Chips y Microesferas</h3>
+                                </article>
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-description">
+                            <div class="servicios-item__servicio">
+                                <article class="servicios-item__servicio-description">
+                                    <h3 class="apimosa__servicios">Revestimientos Elásticos a Base de Poliuretano</h3>
+                                    <h3 class="apimosa__servicios">Revestimientos a Base de Poliureas</h3>
+                                    <h3 class="apimosa__servicios">Revestimientos a Base de Epoxiflexibles</h3>
+                                    <h3 class="apimosa__servicios">Revestimientos a Base de Membranas Colaminadas</h3>
+                                </article>
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-description">
+                            <div class="servicios-item__servicio">
+                                <article class="servicios-item__servicio-description">
+                                    <h3 class="apimosa__servicios">Recuperación de Estructuras de Madera</h3>
+                                    <h3 class="apimosa__servicios">Tratamientos Antixilófagos ,
+                                        Tratamientos Glaseadores</h3>
+                                    <h3 class="apimosa__servicios">Refuerzos Estructurales , Protecciones Activas</h3>
+                                    <h3 class="apimosa__servicios">Limpieza de Artesanados ,
+                                        Limpieza de Elementos Arquitectónicos</h3>
+                                </article>
+                            </div>
+                        </li>
+                        <li class="servicios-item servicios-item-description">
+                            <div class="servicios-item__servicio">
+                                <article class="servicios-item__servicio-description">
+                                    <h3 class="apimosa__servicios">Inyecciones Consolidantes de Terreno</h3>
+                                    <h3 class="apimosa__servicios">Inyecciones Aquareactivas</h3>
+                                    <h3 class="apimosa__servicios">Tratamientos Mineralizadores</h3>
+                                </article>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- <div class="s-control">
+                      <label class="s-c-1" for="s-1"></label>
+                      <label class="s-c-2" for="s-2"></label>
+                      <label class="s-c-3" for="s-3"></label>
+                      <label class="s-c-4" for="s-4"></label>
+                      <label class="s-c-5" for="s-5"></label>
+                      <label class="s-c-6" for="s-6"></label>
+                      <label class="s-c-7" for="s-7"></label>
+                      <label class="s-c-8" for="s-8"></label>
+                      <label class="s-c-9" for="s-9"></label>
+                      <label class="s-c-10" for="s-10"></label>
+                    </div> -->
+                    <div class="s-servicio">
+                        <label class="s-servicio-1 left" for="s-10"></label>
+                        <label class="s-servicio-1 right" for="s-2"></label>
+                        <label class="s-servicio-2 left" for="s-1"></label>
+                        <label class="s-servicio-2 right" for="s-3"></label>
+                        <label class="s-servicio-3 left" for="s-2"></label>
+                        <label class="s-servicio-3 right" for="s-4"></label>
+                        <label class="s-servicio-4 left" for="s-3"></label>
+                        <label class="s-servicio-4 right" for="s-5"></label>
+                        <label class="s-servicio-5 left" for="s-4"></label>
+
+                        <label class="s-servicio-5 right" for="s-6"></label>
+                        <label class="s-servicio-6 left" for="s-5"></label>
+                        <label class="s-servicio-6 right" for="s-7"></label>
+                        <label class="s-servicio-7 left" for="s-6"></label>
+                        <label class="s-servicio-7 right" for="s-8"></label>
+                        <label class="s-servicio-8 left" for="s-7"></label>
+                        <label class="s-servicio-8 right" for="s-9"></label>
+                        <label class="s-servicio-9 left" for="s-8"></label>
+                        <label class="s-servicio-9 right" for="s-10"></label>
+                        <label class="s-servicio-10 left" for="s-9"></label>
+                        <label class="s-servicio-10 right" for="s-1"></label>
                     </div>
-                </li>
-            </ul>
-            <Pager :info="$page.post.pageInfo"
-                   linkClass="pager__link px-3 py-1 mx-3 my-1"
-                   class="mt-4 inline-block w-full text-center flex justify-center items-center"
-                   range="2"
-            />
-        </section>
+                </div>
+            </section>
+        </main>
     </Layout>
 </template>
 
 <script>
-    import VueMarkdown from "vue-markdown";
-    import truncate from "html-truncate";
-    import dateFormat from "date-fns/format";
-    import {documentToHtmlString} from "@contentful/rich-text-html-renderer";
-    import {getCoverImage, renderImage} from "../helpers/contentful";
-    import ImageHover from "../components/ImageHover";
-    import {Pager} from 'gridsome'
+
 
     export default {
         metaInfo: {
-            title: "Fashion Blog"
-        },
-        components: {
-            VueMarkdown,
-            ImageHover,
-            Pager
-        },
-        methods: {
-            excerpt(node) {
-                let excerpt = node.metaDescription ? node.metaDescription : node.body;
-                return truncate(documentToHtmlString(excerpt), 100);
-            },
-            dateFormat(date) {
-                const thisDate = new Date(date);
-                return dateFormat(thisDate, "MMMM do, yyyy");
-            },
-            getCoverImage(node) {
-                return getCoverImage(node);
-            },
-            renderThumbnail(src) {
-                return renderImage({src, fit: "fill", w: 968, h: 968});
-            }
-        },
-        watch: {
-            $route(to) {
-                excerpt(node)
-            },
-        },
+            title: "Apimosa"
+        }
     };
 </script>
 
 <style scoped>
 
-    template {
-        background-color: #EDF2F7;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    #revers > li:nth-child(2n+0) {
-        flex-direction: row-reverse;
-    }
-
-    .zaracolor {
-        background-color: #f0f0f0;
-    }
-
-    .pager__link {
-        color: #CABCE6;
-        text-align: center;
-        text-decoration: none;
-        padding: 0.25rem 0.5rem;
-        margin: 0.25rem 0.5rem;
-    }
-
-    .pager__link:hover:not(.active) {
-        background-color: #CABCE6;
-        border-radius: 15px;
-        color: #ffecf8;
-    }
-
-    .active {
-        background-color: #ffecf8;;
-        border-radius: 15px;
-    }
 
 </style>
 
 <page-query>
-    query Posts($page: Int) {
-        post: allContentfulPost(sortBy:"publishDate" order:DESC perPage: 2, page: $page) @paginate {
-            pageInfo {
-                totalPages
-                currentPage
-            }
-            edges {
-                node {
-                    title
-                    slug
-                    publishDate
-                    metaDescription
-                    body
-                    prendas{
-                        imgLink
-                        aLink
-                    }
-                    heroImage{
-                        file{
-                            url
-                        }
-                    }
 
-                }
-            }
-        }
-    }
 </page-query>

@@ -1,117 +1,101 @@
 <template>
-  <Layout>
-    <h1>Galleries</h1>
-    <ul class="galleries">
-      <li
-        class="gallery"
-        v-for="{ node } in $page.galleries.edges"
-        :key="node.id"
-      >
-        <g-link :to="`/gallery/${node.slug}`">
-          <ImageHover width="100%" height="100%">
-            <g-image
-              class="cover-image"
-              :src="renderThumbnail(getCoverImage(node).url)"
-              :alt="getCoverImage(node).title"
-            />
-          </ImageHover>
-          <h4 class="title">
-            {{ node.title }}
-          </h4>
-        </g-link>
-      </li>
-    </ul>
-  </Layout>
+    <Layout>
+        <section>
+            <h1 class="title__trabajos">Algunos de nuestros trabajos: </h1>
+            <ul class="grid">
+                <li>
+                    <figure class="grid__figure">
+                        <img src="../assets/img/Alamillo2.jpg" alt=""/>
+                        <figcaption>Puente del Alamillo</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="grid__figure">
+                        <img src="../assets/img/estadion1.jpg" alt=""/>
+                        <figcaption>
+                            Estadio de Fútbol "Manuel Ruíz de Lopera"
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="grid__figure">
+                        <img src="../assets/img/estadion2.jpg" alt=""/>
+                        <figcaption>
+                            Estadio del Córdoba Club de Fútbol
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="grid__figure">
+                        <img src="../assets/img/hipodrom.jpg" alt=""/>
+                        <figcaption>Gran hipódromo de Dos Hermanas</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="grid__figure">
+                        <img src="../assets/img/tunel.jpg" alt=""/>
+                        <figcaption>
+                            Centro de convenciones "El Toyo"
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="grid__figure">
+                        <img src="../assets/img/depuradora.jpg" alt=""/>
+                        <figcaption>
+                            Estación depuradora de Ranilla
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="grid__figure">
+                        <img src="../assets/img/palacio.jpg" alt=""/>
+                        <figcaption>Rehabilitación del Palacio de San Telmo</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="grid__figure">
+                        <img src="../assets/img/ciudad.jpg" alt=""/>
+                        <figcaption>
+                            Ciudad de las Artes y las Ciencias
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="grid__figure">
+                        <img src="../assets/img/tenerife.jpg" alt=""/>
+                        <figcaption>
+                            Rencinto Ferial de Santa Cruz de Tenerife
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure class="grid__figure">
+                        <img src="../assets/img/ventas.jpg" alt=""/>
+                        <figcaption>
+                            Puente de Ventas
+                        </figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </section>
+    </Layout>
 </template>
 
 <style lang="scss" scoped>
-@import "~/assets/_core.scss";
-.galleries {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 
-  .gallery {
-    width: 190px;
-    height: 190px;
-
-    @media screen and (max-width: 340px) {
-      width: 50%;
-      height: 40vw;
-    }
-    @media screen and (max-width: 576px) {
-      width: 33.333%;
-      height: 30vw;
-    }
-    position: relative;
-    display: inline-block;
-
-    .cover-image {
-      width: 190px;
-      height: 190px;
-    }
-
-    .title {
-      position: absolute;
-      bottom: 0.24em;
-      left: 0;
-      padding: 0.24em;
-      padding-left: 0.6em;
-      margin: 0;
-      text-shadow: 0 0 4px $dark;
-    }
-  }
-}
 </style>
 
 <script>
-import { getCoverImage, renderImage } from "../helpers/contentful";
-import ImageHover from "../components/ImageHover";
 
-export default {
-  metaInfo: {
-    title: "Galleries"
-  },
-  components: {
-    ImageHover
-  },
-  methods: {
-    getCoverImage(node) {
-      return getCoverImage(node);
-    },
-    renderThumbnail(src) {
-      return renderImage({ src, fit: "fill", w: 760 / 4, h: 760 / 4 });
-    }
-  }
-};
+
+    export default {
+        metaInfo: {
+            title: "Apimosa"
+        }
+    };
 </script>
 
 <page-query>
-query Galleries {
-  galleries: allContentfulGallery(sort: [{by: "sortOrder", order: ASC }, {by: "title", order: ASC}]) {
-    edges {
-      node {
-        id,
-        title,
-        slug,
-        media {
-          file {
-            url
-          },
-          title
-        },
-        heroImage {
-          file { 
-            url
-          },
-          title
-        }
-      }
-    }
-  }
-}
+
 </page-query>

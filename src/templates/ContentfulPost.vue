@@ -1,122 +1,21 @@
 <template>
     <Layout class="post">
-        <!--
 
-        <div class="post-header">
-          <h1 class="post-title">
-            {{ $page.post.title }}
-          </h1>
-          <span class="post-date hand-written">{{ $page.post.publishDate }}</span>
-          <g-image
-            class="post-hero-image"
-            v-if="$page.post.heroImage"
-            :src="renderHeroImage($page.post.heroImage.file.url)"
-            :alt="$page.post.heroImage.title"
-          />
-        </div>
-        <vue-markdown class="post-body">{{ changeData }}</vue-markdown>
-        <div class="post-footer">
-          <g-link class="return-link" to="/blog/" title="To blog overview"
-            >👈 Back to blog overview</g-link
-          >
-        </div>
-      -->
-        <!-- Showcase -->
-        <section class="section-a my-8">
-            <div class="container">
-                <div>
-                    <div class=" sm:hidden w-full mb-4">
-                        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-                    </div>
-                    <h1 class="text-3xl">{{ $page.post.title }}</h1>
-                    <div class="w-full my-4">
-                        <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-                    </div>
-                    <vue-markdown class="">{{ changeData }}</vue-markdown>
-                    <div class="flex justify-between">
-                        <g-link class="bg-transparent hoverGradiant text-black-700 font-semibold hover:text-white py-2 px-4 border border-black-500 hover:border-transparent rounded" to="/blog/" title="To blog overview"
-                        >Blog
-                        </g-link>
-                        <g-link class="bg-transparent hoverGradiant text-black-700 font-semibold hover:text-white py-2 px-4 border border-black-500 hover:border-transparent rounded">
-                            Next Post
-                        </g-link>
-                    </div>
-
-                </div>
-                <g-image
-                        class="object-contain h-full w-full"
-                        v-if="$page.post.heroImage"
-                        :src="renderHeroImage($page.post.heroImage.file.url)"
-                        :alt="$page.post.heroImage.title"
-                />
-            </div>
-        </section>
-
-        <!-- Large Text -->
-        <!--    <section id="about" class="section-b">
-                <div class="overlay">
-                    <div class="section-b-inner py-5">
-                        <h3 class="text-2">Loud & Clear</h3>
-                        <h2 class="text-5 mt-1">People Aren't Hearing All the Music</h2>
-                        <p class="mt-1">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                            repudiandae laboriosam quia, error tempore porro ducimus voluptate
-                            laborum nostrum iure.
-                        </p>
-                    </div>
-                </div>
-            </section>-->
-
-        <!-- Gallery -->
-        <section class="section-c">
-            <div class="gallery">
-                <a href="https://i.ibb.co/CHLBZnp/gal2323.jpg" class="big"
-                ><img src="https://i.ibb.co/CHLBZnp/gal2323.jpg" alt=""
-                /></a>
-                <a href="https://i.ibb.co/4pBbhfY/gal39834.jpg" class="big"
-                ><img src="https://i.ibb.co/4pBbhfY/gal39834.jpg" alt=""
-                /></a>
-                <a href="https://i.ibb.co/xSnHP7g/gal43884.jpg" class="big"
-                ><img src="https://i.ibb.co/xSnHP7g/gal43884.jpg" alt=""
-                /></a>
-                <a href="https://i.ibb.co/QN6Bnrb/gal4958.jpg" class="big"
-                ><img src="https://i.ibb.co/QN6Bnrb/gal4958.jpg" alt=""
-                /></a>
-                <a href="https://i.ibb.co/dGZvj75/gal4545.jpg" class="big">
-                    <img src="https://i.ibb.co/dGZvj75/gal4545.jpg" alt=""
-                    /></a>
-                <a href="https://i.ibb.co/S6FVFNt/gal74744.jpg" class="big"
-                ><img src="https://i.ibb.co/S6FVFNt/gal74744.jpg" alt=""
-                /></a>
-            </div>
-        </section>
     </Layout>
 </template>
 
 <script>
-    import {renderImage} from "../helpers/contentful";
     import VueMarkdown from "vue-markdown";
-    import {documentToHtmlString} from "@contentful/rich-text-html-renderer";
+
 
     export default {
         metaInfo() {
             return {
-                title: this.$page.post.title
+                title: 'Apimosa'
             };
         },
         components: {
             VueMarkdown
-        },
-        computed: {
-            changeData: function () {
-                // `this` points to the vm instance
-                return documentToHtmlString(this.$page.post.description)
-            }
-        },
-        methods: {
-            renderHeroImage(src) {
-                return renderImage({src, fit: "fill", w: 1200, h: 1200});
-            }
         }
     };
 </script>
@@ -394,20 +293,5 @@
 </style>
 
 <page-query>
-    query Post ($path: String!) {
-        post: contentfulPost (path: $path) {
-            title,
-            slug,
-            publishDate,
-            metaDescription,
-            body,
-            description,
-            heroImage {
-                file {
-                    url
-                }
-                title
-            }
-        }
-    }
+
 </page-query>

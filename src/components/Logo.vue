@@ -1,4 +1,4 @@
 <template>
-    <img alt="dailystyle blog" class="lg:h-auto lg:w-24 h-auto w-16" src="../assets/icons/logoNegro.png"/>
+    <img alt="Apimosa S.L pinturas y recubrimientos"  src="../assets/img/logoSVG.svg"/>
 </template>
 
