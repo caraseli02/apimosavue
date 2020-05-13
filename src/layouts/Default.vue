@@ -1,10 +1,6 @@
 <template>
     <div class="layout">
-        <Nav/>
-        <profile-page>
-
-        </profile-page>
-
+        <Nav/>>
         <transition name="fade" appear>
             <div class="my-6">
                 <slot/>
@@ -79,8 +75,8 @@
 </style>
 
 <style lang="scss">
-    @import "../assets/_sass/estilos.scss";
 
+    @import "~/assets/_sass/estilos.scss";
 </style>
 
 
