@@ -1,60 +1,61 @@
 <template>
-    <div class="layout">
-        <Nav/>>
+    <main class="layout">
+        <Nav/>
         <transition name="fade" appear>
-            <div class="my-6">
+            <div class="">
                 <slot/>
             </div>
         </transition>
-        <footer class="">
+        <div class="bg-gray-200 px-6 py-12">
 
+            <footer class="container mx-auto">
 
-                <!--
-                 ..
-                  * Bloque FOOTER
-                  *
-                  -->
-                <!-- NR de Telefono -->
-                <a href="tel:+34954-143-950" class="telefono"><img src="../assets/img/logoCal.svg" alt="" class="icon__telefono" /> 954-143-950</a>
-                <a href="tel:+34954-143-950" class="fax"><img src="../assets/img/fax.svg" alt="" class="icon__fax" />954-143-177</a>
-                <a href="mailto:apimosa@apimosa.es" class="mail"><i class="fas fa-envelope icon__mail"></i>apimosa@apimosa.es</a>
-
-                <!-- REDES -->
-
-                <section class="redes">
-                    <a class="red redes__wa" href="https://wa.me/34954-143-950"><img  src="../assets/img/whatsapp.svg" alt=""></a>
-                    <a class="red redes__fb" href="https://www.facebook.com/apimosa.es/photos/a.278914705619040/499192160257959/?type=3&theater"><img  src="/_assets/img/facebook.svg" alt=""></a>
-                    <a class="red redes__li" href=""><img  src="../assets/img/linkedin.svg" alt=""></a>
-                </section>
-                <!-- MAPS -->
-                <div class="location">
-                    <a class="location_sevilla" href="https://www.google.com/maps/place/Apimosa+S+L/@37.467531,-5.6443901,15z/data=!4m5!3m4!1s0x0:0xefb6047254d73108!8m2!3d37.467531!4d-5.6443901" width="170" height="135" frameborder="0" style="border:0;" allowfullscreen="">
-                        <img class="location_sevilla_img" src="../assets/img/locSevilla.svg" alt=""></a>
-                    <span class="location__txt"> <i class="fas fa-home homemap"></i>Calle Real, 66, 41410 Carmona, Sevilla</span>
-                </div>
-                <div class="locationMalaga">
-                    <a class="locationMalaga_link" href="https://www.google.com/maps/place/Apimosa+S+L/@37.467531,-5.6443901,15z/data=!4m5!3m4!1s0x0:0xefb6047254d73108!8m2!3d37.467531!4d-5.6443901" width="170" height="135" frameborder="0" style="border:0;" allowfullscreen="">
-                        <img class="locationMalaga_img" src="../assets/img/locSevilla.svg" alt=""></a>
-                    <span class="locationMalaga__txt"> Malaga</span>
-                </div>
-                <div class="locationPMI">
-                    <a class="locationPMI_link" href="https://www.google.com/maps/place/Son+Sant+Joan,+07611+Palma,+Illes+Balears/@39.5428852,2.7236142,17z/data=!4m2!3m1!1s0x129794240e2c221f:0x78fd44dee89bfe88" width="170" height="135" frameborder="0" style="border:0;" allowfullscreen="">
-                        <img class="locationPMI_img" src="../assets/img/locSevilla.svg" alt=""></a>
-                    <span class="locationMalaga__txt"> Aeroport de Palma</span>
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/4 flex flex-col mb-12 md:mb-0">
+                        <h4 class="font-condensed pb-4">Legal</h4>
+                        <g-link to="/priva/" class="text-sm text-gray-800 py-1">Política de privacidad</g-link>
+                        <g-link to="/terminos/" class="text-sm text-gray-800 py-1">Términos y condiciones</g-link>
+                        <g-link to="/cookies/" class="text-sm text-gray-800 py-1">Cookies</g-link>
+                    </div>
+                    <div class="md:w-1/4 flex flex-col mb-12 md:mb-0">
+                        <h4 class="font-condensed pb-4">Quienes</h4>
+                        <a href="conocenos" class="text-sm text-gray-800 py-1">Información de la empresa</a>
+                        <a href="#" class="text-sm text-gray-800 py-1">Historia</a>
+                    </div>
+                    <div class="md:w-1/4 flex flex-col mb-12 md:mb-0">
+                        <h4 class="font-condensed pb-4">Servicios</h4>
+                        <a href="#" class="text-sm text-gray-800 py-1">Ingenieria</a>
+                        <a href="#" class="text-sm text-gray-800 py-1">Construccion</a>
+                        <a href="#" class="text-sm text-gray-800 py-1">Rehabilitacion</a>
+                    </div>
+                    <div class="md:w-1/4 flex flex-col mb-12 md:mb-0">
+                        <h4 class="font-condensed pb-4">Direcciones</h4>
+                        <a href="#" target="_blank" class="text-sm text-gray-800 py-1">Localización de la oficina</a>
+                        <a href="#" target="_blank" class="text-sm text-gray-800 py-1">Contactar</a>
+                    </div>
                 </div>
 
-                <!-- IMG Certifications -->
-                <div class="certification"><img src="../assets/img/Blogo.png" alt="" class="certification__img"></div>
-                <div class="certification2"><img src="../assets/img/ohsas.jpg" alt="" class="certification__img"></div>
-                <!-- LINKS -->
-                <ul class="Flinks">
-                    <li class="Flink fixTablet"><a href="">Accesibilidad</a></li >
-                    <li class="Flink"><a href="">Política de privacidad</a></li>
-                    <li class="Flink fixTablet"><a href="">Política de cookies</a></li>
-                    <li class="Flink"><a href="">Términos y condiciones</a></li>
-                </ul>
-        </footer>
-    </div>
+                <div class=" pt-12">
+                    <div class="w-full md:w-1/2">
+                        <div class="flex justify-around">
+                            <g-image
+                                    src="../assets/img/Blogo2.jpg"
+                                    width="150px"
+                                    fit="cover"
+                            />
+                            <g-image
+                                    src="../assets/img/ohsas.jpg"
+                                    width="150px"
+                                    fit="cover"
+                            />
+                            <!--                            <p class="text-sm text-gray-700">Copyright © 2020 GruCompany Name</p>-->
+                            <!--                            <p class="text-xs text-gray-700 mt-2">Etiam dignissim diam quis enim lobortis scelerisque fermentum dui.</p>-->
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </main>
 </template>
 
 <script>
@@ -71,12 +72,11 @@
 <style scoped>
 
 
-
 </style>
 
 <style lang="scss">
 
-    @import "~/assets/_sass/estilos.scss";
+
 </style>
 
 

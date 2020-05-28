@@ -1,580 +1,236 @@
 <template>
     <Layout class="">
-        <!-- Slide Show A Pen By geekwen
-        https://codepen.io/geekwen/pen/QNxymm/  -->
-        <main>
-            <section class="outer-wrapper">
-                <div id="popup1" class="overlay">
-                    <!-- Contenedores de POPUPS -->
-                    <div class="popup">
-                        <a class="close" href="#"><i class="fas fa-times"></i></a>
-                        <article class="popups-item popups-item-1">
+        <section>
+            <article class="w-full bg-blue-600">
 
-                            <div class="popups-item__popup">
-                                <h2 class="popups-item__popup__text">
-                                    Ingeniería Constructiva
-                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
-                                </h2>
-                                <div class="popups-item__img">
-                                    <a
-                                            href="../assets/img/ingenieria1.jpg"
-                                            class="popups-item__img__ingi"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/ingenieria2.jpg"
-                                            class="popups-item__img__ingi"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/ingenieria3.jpg"
-                                            class="popups-item__img__ingi"
-                                    ></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="popups-item popups-item-description">
-                            <div class="popups-item__popup">
-                                <div class="popups-item__popup-description">
-                                    <..h class="apimosa__popups">Prescripciones Técnicas
-                                    <hr/>
-                                    <h3 class="apimosa__popups">Diagnosis de Superficies</h3>
-                                    <h3 class="apimosa__popups">Especificaciones de Nuevas Tecnologías</h3>
-                                    <h3 class="apimosa__popups">Estudios y Seguimientos de Mantenimientos
-                                        Preventivos</h3>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div id="popup2" class="overlay">
-                    <div class="popup">
-                        <a class="close" href="#"><i class="fas fa-times"></i></a>
-                        <article class="popups-item popups-item-2">
+                <div class="w-full h-full relative flex items-center justify-center py-24">
 
-                            <div class="popups-item__popup">
-                                <h2 class="popups-item__popup__text">
-                                    Trabajo de Protección Anticorrosiva
-                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
-                                </h2>
-                                <div class="popups-item__img">
-                                    <a
-                                            href="../assets/img/Anticorrosiva1.jpg"
-                                            class="popups-item__img__corro"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/Anticorrosiva2.jpg"
-                                            class="popups-item__img__corro"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/works3.jpg"
-                                            class="popups-item__img__link"
-                                    ></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="popups-item popups-item-description">
-                            <div class="popups-item__popup">
-                                <div class="popups-item__popup-description">
-                                    <h3 class="apimosa__popups">Puentes ,
-                                        Estructuras</h3>
-                                    <h3 class="apimosa__popups">Tuberías ,
-                                        Conductos</h3>
-                                    <h3 class="apimosa__popups">Tanques ,
-                                        Aerogeneradores</h3>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div id="popup3" class="overlay">
-                    <div class="popup">
-                        <a class="close" href="#"><i class="fas fa-times"></i></a>
-                        <article class="popups-item popups-item-3">
-                            <div class="popups-item__popup">
-                                <h2 class="popups-item__popup__text">
-                                    Preparación de Superficies
-                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
-                                </h2>
-                                <div class="popups-item__img">
-                                    <a
-                                            href="../assets/img/superficies1.jpg"
-                                            class="popups-item__img__super"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/superficies2.jpg"
-                                            class="popups-item__img__super"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/superficies3.jpg"
-                                            class="popups-item__img__super"
-                                    ></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="popups-item popups-item-description">
-                            <div class="popups-item__popup">
-                                <div class="popups-item__popup-description">
-                                    <h3 class="apimosa__popups">Chorro de Arena Fijo</h3 class="apimosa__popups">
-                                    <h3 class="apimosa__popups">Chorro de Arena Móvil</h3>
-                                    <h3 class="apimosa__popups">Hidrolimpiezas</h3>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div id="popup4" class="overlay">
-                    <div class="popup">
-                        <a class="close" href="#"><i class="fas fa-times"></i></a>
-                        <article class="popups-item popups-item-4">
-
-                            <div class="popups-item__popup">
-                                <h2 class="popups-item__popup__text">
-                                    Trabajo de Protecciones Pasiva
-                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
-                                </h2>
-                                <div class="popups-item__img">
-                                    <a
-                                            href="../assets/img/protecciones1.jpg"
-                                            class="popups-item__img__pro"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/protecciones2.jpg"
-                                            class="popups-item__img__pro"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/protecciones3.jpg"
-                                            class="popups-item__img__pro"
-                                    ></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="popups-item popups-item-description">
-                            <div class="popups-item__popup">
-                                <div class="popups-item__popup-description">
-                                    <h3 class="apimosa__popups">Pinturas Intumescentes</h3>
-                                    <h3 class="apimosa__popups">Mortero Ignífugo</h3>
-                                    <h3 class="apimosa__popups">Sellado Intumescentes</h3>
-                                    <h3 class="apimosa__popups">Sellado de Juntas Ignífugas</h3>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div id="popup5" class="overlay">
-                    <div class="popup">
-                        <a class="close" href="#"><i class="fas fa-times"></i></a>
-                        <article class="popups-item popups-item-5">
-
-                            <div class="popups-item__popup">
-                                <h2 class="popups-item__popup__text">
-                                    Patologías de Hormigones
-                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
-                                </h2>
-                                <div class="popups-item__img">
-                                    <a
-                                            href="../assets/img/hormigones1.jpg"
-                                            class="popups-item__img__horm"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/hormigones2.jpg"
-                                            class="popups-item__img__horm"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/hormigones3.jpg"
-                                            class="popups-item__img__horm"
-                                    ></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="popups-item popups-item-description">
-                            <div class="popups-item__popup">
-                                <div class="popups-item__popup-description">
-                                    <h3 class="apimosa__popups">Reparaciones de Hormigones</h3>
-                                    <h3 class="apimosa__popups">Morteros y Resinas de Alta Resistencia</h3>
-                                    <h3 class="apimosa__popups">Refuerzos Estructurales , Tratamientos Preventivos</h3>
-                                    <h3 class="apimosa__popups">Tratamientos de Fisuras y Grietas</h3>
-                                    <h3 class="apimosa__popups">Protecciones Catódicas y Anódicas</h3>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div id="popup6" class="overlay">
-                    <div class="popup">
-                        <a class="close" href="#"><i class="fas fa-times"></i></a>
-                        <article class="popups-item popups-item-6">
-
-                            <div class="popups-item__popup">
-                                <h2 class="popups-item__popup__text">
-                                    Pavimentos Industriales
-                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
-                                </h2>
-                                <div class="popups-item__img">
-                                    <a
-                                            href="../assets/img/pavimentos1.jpg"
-                                            class="popups-item__img__indu"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/pavimentos2.jpg"
-                                            class="popups-item__img__indu"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/pavimentos3.jpg"
-                                            class="popups-item__img__indu"
-                                    ></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="popups-item popups-item-description">
-                            <div class="popups-item__popup">
-                                <div class="popups-item__popup-description">
-                                    <h3 class="apimosa__popups">Mortero Cementoso , Mortero Cementoso-Epoxídico</h3>
-                                    <h3 class="apimosa__popups">Mortero Epoxídico , Mortero Epoxídico-Conductivo</h3>
-                                    <h3 class="apimosa__popups">Mortero Cementoso / Epoxídico de Fraguado Ultra
-                                        Rápido</h3>
-                                    <h3 class="apimosa__popups">Sistemas Multicapas , Tratamientos Antipolvos</h3>
-                                    <h3 class="apimosa__popups">Morteros de altas prestaciones físicas y químicas</h3>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div id="popup7" class="overlay">
-                    <div class="popup">
-                        <a class="close" href="#"><i class="fas fa-times"></i></a>
-                        <article class="popups-item popups-item-7">
-
-                            <div class="popups-item__popup">
-                                <h2 class="popups-item__popup__text">
-                                    Pavimentos Decorativos
-                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
-                                </h2>
-                                <div class="popups-item__img">
-                                    <a
-                                            href="../assets/img/decorativos1.jpg"
-                                            class="popups-item__img__deco"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/decorativos2.jpg"
-                                            class="popups-item__img__deco"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/decorativos3.jpg"
-                                            class="popups-item__img__deco"
-                                    ></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="popups-item popups-item-description">
-                            <div class="popups-item__popup">
-                                <div class="popups-item__popup-description">
-                                    <h3 class="apimosa__popups">Mortero Cementoso , Mortero Cementoso-Epoxídico</h3>
-                                    <h3 class="apimosa__popups">Mortero Epoxídico , Mortero Epoxídico-Conductivo</h3>
-                                    <h3 class="apimosa__popups">Mortero Epoxídico , Sistemas Multicapas</h3>
-                                    <h3 class="apimosa__popups">Morteros Autonivelantes con Adición de Cuarzocolor,
-                                        Chips y Microesferas</h3>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div id="popup8" class="overlay">
-                    <div class="popup">
-                        <a class="close" href="#"><i class="fas fa-times"></i></a>
-                        <article class="popups-item popups-item-8">
-
-                            <div class="popups-item__popup">
-                                <h2 class="popups-item__popup__text">
-                                    Tratamiento de Impermeabilizaciones
-                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
-                                </h2>
-                                <div class="popups-item__img">
-                                    <a
-                                            href="../assets/img/imper.jpg"
-                                            class="popups-item__img__imper"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/imper2.jpg"
-                                            class="popups-item__img__imper"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/imper3.jpg"
-                                            class="popups-item__img__imper"
-                                    ></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="popups-item popups-item-description">
-                            <div class="popups-item__popup">
-                                <div class="popups-item__popup-description">
-                                    <h3 class="apimosa__popups">Revestimientos Elásticos a Base de Poliuretano</h3>
-                                    <h3 class="apimosa__popups">Revestimientos a Base de Poliureas</h3>
-                                    <h3 class="apimosa__popups">Revestimientos a Base de Epoxiflexibles</h3>
-                                    <h3 class="apimosa__popups">Revestimientos a Base de Membranas Colaminadas</h3>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div id="popup9" class="overlay">
-                    <div class="popup">
-                        <a class="close" href="#"><i class="fas fa-times"></i></a>
-                        <article class="popups-item popups-item-9">
-
-                            <div class="popups-item__popup">
-                                <h2 class="popups-item__popup__text">
-                                    Rehabilitación de Edificios
-                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
-                                </h2>
-                                <div class="popups-item__img">
-                                    <a
-                                            href="../assets/img/edificios1.jpg"
-                                            class="popups-item__img__edif"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/edificios2.jpg"
-                                            class="popups-item__img__edif"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/edificios3.jpg"
-                                            class="popups-item__img__edif"
-                                    ></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="popups-item popups-item-description">
-                            <div class="popups-item__popup">
-                                <div class="popups-item__popup-description">
-                                    <h3 class="apimosa__popups">Recuperación de Estructuras de Madera</h3>
-                                    <h3 class="apimosa__popups">Tratamientos Antixilófagos ,
-                                        Tratamientos Glaseadores</h3>
-                                    <h3 class="apimosa__popups">Refuerzos Estructurales , Protecciones Activas</h3>
-                                    <h3 class="apimosa__popups">Limpieza de Artesanados ,
-                                        Limpieza de Elementos Arquitectónicos</h3>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div id="popup10" class="overlay">
-                    <div class="popup">
-                        <a class="close" href="#"><i class="fas fa-times"></i></a>
-                        <article class="popups-item popups-item-10">
-
-                            <div class="popups-item__popup">
-                                <h2 class="popups-item__popup__text">
-                                    Inyecciones
-                                    <!-- <a class="link_servicios" href="servicios.html"></a> -->
-                                </h2>
-                                <div class="popups-item__img">
-                                    <a
-                                            href="../assets/img/inect1.jpg"
-                                            class="popups-item__img__inect"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/inect2.jpg"
-                                            class="popups-item__img__inect"
-                                    ></a>
-                                    <a
-                                            href="../assets/img/inect3.jpg"
-                                            class="popups-item__img__inect"
-                                    ></a>
-                                </div>
-                            </div>
-                        </article>
-                        <article class="popups-item popups-item-description">
-                            <div class="popups-item__popup">
-                                <div class="popups-item__popup-description">
-                                    <h3 class="apimosa__popups">Inyecciones Consolidantes de Terreno</h3>
-                                    <h3 class="apimosa__popups">Inyecciones Aquareactivas</h3>
-                                    <h3 class="apimosa__popups">Tratamientos Mineralizadores</h3>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="s-wrap s-type-1" role="slider">
-                    <input
-                            type="radio"
-                            id="s-1"
-                            name="slider-control"
-                            checked="checked"
+                    <g-image src="../assets/img/work1.jpg"
+                             class="absolute top-0 left-0 w-full h-full object-cover opacity-50"
                     />
-                    <input type="radio" id="s-2" name="slider-control"/>
-                    <input type="radio" id="s-3" name="slider-control"/>
-                    <input type="radio" id="s-4" name="slider-control"/>
-                    <input type="radio" id="s-5" name="slider-control"/>
-                    <input type="radio" id="s-6" name="slider-control"/>
-                    <input type="radio" id="s-7" name="slider-control"/>
-                    <input type="radio" id="s-8" name="slider-control"/>
-                    <input type="radio" id="s-9" name="slider-control"/>
-                    <input type="radio" id="s-10" name="slider-control"/>
-                    <ul class="s-content">
-                        <li class="s-item s-item-1">
-                            <div class="s-item__text">
-                                <h2 class="s-item__text__title">
-                                    Ingeniería Constructiva
-                                    <a class="link_servicios" href="#popup1"></a>
-                                </h2>
-                                <h3 class="s-item__text__description">
-                                    Especificaciones de Nuevas Tecnologías...
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="s-item s-item-2">
-                            <div class="s-item__text">
-                                <h2 class="s-item__text__title">
-                                    Protección Anticorrosiva
-                                    <a class="link_servicios" href="#popup2"></a>
-                                </h2>
-                                <h3 class="s-item__text__description">
-                                    Puentes, Estructuras, Aerogeneradores...
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="s-item s-item-3">
-                            <div class="s-item__text">
-                                <h2 class="s-item__text__title">
-                                    Preparación de Superficies
-                                    <a class="link_servicios" href="#popup3"></a>
-                                </h2>
-                                <h3 class="s-item__text__description">
-                                    Chorro de Arena Fijo, Arena Móvil...
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="s-item s-item-4">
-                            <div class="s-item__text">
-                                <h2 class="s-item__text__title">
-                                    Trabajo de Protecciones Pasiva
-                                    <a class="link_servicios" href="#popup4"></a>
-                                </h2>
-                                <h3 class="s-item__text__description">
-                                    Pinturas, Mortero, Sellado...
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="s-item s-item-5">
-                            <div class="s-item__text">
-                                <h2 class="s-item__text__title">
-                                    Patologías de Hormigones
-                                    <a class="link_servicios" href="#popup5"></a>
-                                </h2>
-                                <h3 class="s-item__text__description">
-                                    Morteros y Resinas de Alta Resistencia...
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="s-item s-item-6">
-                            <div class="s-item__text">
-                                <h2 class="s-item__text__title">
-                                    Pavimentos Industriales
-                                    <a class="link_servicios" href="#popup6"></a>
-                                </h2>
-                                <h3 class="s-item__text__description">
-                                    Morteros, Multicapas, Tratamientos...
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="s-item s-item-7">
-                            <div class="s-item__text">
-                                <h2 class="s-item__text__title">
-                                    Pavimentos Decorativos
-                                    <a class="link_servicios" href="#popup7"></a>
-                                </h2>
-                                <h3 class="s-item__text__description">
-                                    Mortero Cementoso,Autonivelantes...
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="s-item s-item-8">
-                            <div class="s-item__text">
-                                <h2 class="s-item__text__title">
-                                    Impermeabilizaciones
-                                    <a class="link_servicios" href="#popup8"></a>
-                                </h2>
-                                <h3 class="s-item__text__description">
-                                    Revestimientos Industriales...
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="s-item s-item-9">
-                            <div class="s-item__text">
-                                <h2 class="s-item__text__title">
-                                    Rehabilitación de Edificios
-                                    <a class="link_servicios" href="#popup9"></a>
-                                </h2>
-                                <h3 class="s-item__text__description">
-                                    Recuperación, Tratamientos, Refuerzos...
-                                </h3>
-                            </div>
-                        </li>
-                        <li class="s-item s-item-10">
-                            <div class="s-item__text">
-                                <h2 class="s-item__text__title">
-                                    Inyecciones
-                                    <a class="link_servicios" href="#popup10"></a>
-                                </h2>
-                                <h3 class="s-item__text__description">
-                                    Inyecciones Consolidantes, Tratamientos...
-                                </h3>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="s-control">
-                        <label class="s-c-1" for="s-1"></label>
-                        <label class="s-c-2" for="s-2"></label>
-                        <label class="s-c-3" for="s-3"></label>
-                        <label class="s-c-4" for="s-4"></label>
-                        <label class="s-c-5" for="s-5"></label>
-                        <label class="s-c-6" for="s-6"></label>
-                        <label class="s-c-7" for="s-7"></label>
-                        <label class="s-c-8" for="s-8"></label>
-                        <label class="s-c-9" for="s-9"></label>
-                        <label class="s-c-10" for="s-10"></label>
-                    </div>
-                    <div class="s-nav">
-                        <label class="s-nav-1 left" for="s-10"></label>
-                        <label class="s-nav-1 right" for="s-2"></label>
-                        <label class="s-nav-2 left" for="s-1"></label>
-                        <label class="s-nav-2 right" for="s-3"></label>
-                        <label class="s-nav-3 left" for="s-2"></label>
-                        <label class="s-nav-3 right" for="s-4"></label>
-                        <label class="s-nav-4 left" for="s-3"></label>
-                        <label class="s-nav-4 right" for="s-5"></label>
-                        <label class="s-nav-5 left" for="s-4"></label>
 
-                        <label class="s-nav-5 right" for="s-6"></label>
-                        <label class="s-nav-6 left" for="s-5"></label>
-                        <label class="s-nav-6 right" for="s-7"></label>
-                        <label class="s-nav-7 left" for="s-6"></label>
-                        <label class="s-nav-7 right" for="s-8"></label>
-                        <label class="s-nav-8 left" for="s-7"></label>
-                        <label class="s-nav-8 right" for="s-9"></label>
-                        <label class="s-nav-9 left" for="s-8"></label>
-                        <label class="s-nav-9 right" for="s-10"></label>
-                        <label class="s-nav-10 left" for="s-9"></label>
-                        <label class="s-nav-10 right" for="s-1"></label>
+                    <div class="px-6 max-w-4xl relative z-10 text-center">
+                        <h1 class="text-3xl md:text-4xl font-black text-white leading-tight mb-2">Grupo Apimosa</h1>
+                        <h2 class="text-lg md:text-2xl font-condensed text-white leading-tight mb-8"> Lleva más de 50
+                            años en el mercado, investigando, desarrollando y comprobando el resultado de sus trabajos a
+                            lo largo del tiempo. </h2>
+                        <a href="#conocenos"
+                           class="inline-block bg-white font-condensed text-primary py-2 px-5 text-base rounded-full hover:shadow-lg hover:bg-blue-600 hover:text-white">
+                            Conócenos
+                        </a>
                     </div>
+
                 </div>
-            </section>
-            <section class="Conocenos">
-                <h1 class="Conocenos__name">Apimosa S.L</h1>
-                <p class="Conocenos__description">
-                    Grupo Apimosa lleva más de 50 años en el mercado, investigando,
-                    desarrollando y comprobando el resultado de sus trabajos a lo largo
-                    del tiempo.
-                </p>
-                <span class="Conocenos__link">
-           <a href="conocenos.html">Conócenos</a>
-        </span>
-            </section>
-            <section class="IndexGalery">
-                <a class="IndexGalery__link" href="trabajos.html"></a>
-                <div class="IndexGalery__img1"></div>
-                <div class="IndexGalery__img2"></div>
-                <div class="IndexGalery__img3"></div>
-            </section>
-        </main>
+
+            </article>
+
+            <article class="relative bg-gray-100 py-24 px-2 md:px-6 xl:px-12 grid grid-rows-1 grid-cols-1 md:grid-cols-2  gap-4">
+
+                <figure class="max-w-sm overflow-hidden shadow-lg j-self">
+                    <g-image src="../assets/img/ingenieria2.jpg"
+                             height="335.48"
+                             width="480"
+                             alt="Ingeniería Constructiva Apimosa"
+                             fit="cover"
+                    />
+                    <figcaption class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Ingeniería Constructiva</div>
+                        <p class="text-gray-700 text-base">
+                        <h3 class="italic">Prescripciones Técnicas</h3>
+                        <h3 class="italic">Diagnosis de Superficies</h3>
+                        <h3 class="italic">Especificaciones de Nuevas Tecnologías</h3>
+                        <h3 class="italic">Estudios y Seguimientos de Mantenimientos Preventivos</h3>
+                        </p>
+                    </figcaption>
+                    <figcaption class="px-6 py-4">
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Ciudad de las Artes y las Ciencias </span>
+                    </figcaption>
+                </figure>
+                <figure class="max-w-sm overflow-hidden shadow-lg j-self">
+                    <g-image src="../assets/img/corrosivo.jpg"
+                             height="335.48"
+                             width="480"
+                             fit="cover"
+                             alt="Ingeniería Constructiva Apimosa"/>
+                    <figcaption class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Trabajo de Protección Anticorrosiva</div>
+                        <p class="text-gray-700 text-base">
+                        <h3 class="apimosa__popups">Puentes ,
+                            Estructuras</h3>
+                        <h3 class="apimosa__popups">Tuberías ,
+                            Conductos</h3>
+                        <h3 class="apimosa__popups">Tanques ,
+                            Aerogeneradores</h3>
+                        </p>
+                    </figcaption>
+                    <figcaption class="px-6 py-4">
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#Puente del Alamillo</span>
+                    </figcaption>
+                </figure>
+                <g-link to="/blog"
+                   class="mb-4 mr-4 px-3 py-3 absolute right-0 bottom-0 inline-block bg-blue-600 font-condensed text-primary text-base rounded-full hover:shadow-lg hover:bg-blue-600 hover:text-white">
+                    Lista de Servicios <span class="text-base p-2 ">&#8594;</span>
+                </g-link>
+            </article>
+
+            <article id="conocenos" class="bg-white p-12 py-24">
+
+                <div class="max-w-2xl mx-auto text-center mb-12">
+                    <h2 class="font-black leading-tight text-xl md:text-3xl mb-4"> Grupo Apimosa ( Carmona Sevilla
+                        ) </h2>
+                    <p class="text-sm md:text-base font-condensed max-w-lg mx-auto">Inicia su actividad
+                        empresarial en el año 1987.</p>
+                </div>
+
+                <div class="container mx-auto">
+
+                    <div class="flex flex-wrap justify-center items-center">
+
+                        <div class="mb-12 lg:mb-0 w-full lg:w-3/12 text-right">
+                            <div class="bg-white p-4 rounded-lg shadow-lg w-full">
+                                <img src="https://images.unsplash.com/photo-1493286825465-8b922d030e9c?w=800"
+                                     class="w-full h-auto object-cover rounded"/>
+                            </div>
+                        </div>
+
+                        <div class="w-full lg:flex-1 max-w-2xl text-sm lg:pl-12 text-gray-800">
+                            <h3 class="text-xl mb-3">Con objetivo fundamental
+                                asesorar, controlar y ejecutar con máximas garantías todos y cada uno de los trabajos
+                                realizados</h3>
+                            <p class="mb-3">Nuestros primeros servicios estuvieron centrados en los tratamientos de
+                                anticorrisión y patologías del hormigón en grandes estructuras industriales. A partir de
+                                entonces, nuestras líneas de negocio se han ido diversificando y con ello nuestra
+                                empresa ha ido creciendo y desarrollándose de forma sólida como grupo, materializando el
+                                mismo con la creación de nuevas empresas.</p>
+                            <p class="mb-3">Otra de nuestras empesas relevantes del sector es Apym. quien empezó su
+                                andadura en el año 2000 con el firme propósito de dar soluciones diferentes demandas por
+                                parte nuestros clientes en otros sectores en los que Apimosa no se encuentra
+                                presente.</p>
+                            <p class="mb-3">Esta nueva orientación del grupo ha sido posible gracias a la creación y
+                                desarrollo de
+                                procedimientos propios y un sistema integrado que hacen que nuestras empresas cumplan
+                                con estrictos estándares de calidad y respeto con el medio ambiente. Dichas directrices
+                                son modelos para nuestras sociedades y nos han permitido recibir reconocimientos
+                                nacionales e internacionales.</p>
+                            <p class="mb-3">
+                                Gracias a estos niveles de calidad, varias empresas importantes en diferentes sectores
+                                tanto a nivel nacional como internacional han apostado por nuestra empresa,
+                                ofreciéndonos su confianza para el desarrollo y ejecución de sus proyectos.
+                            </p>
+                            <p>
+                                Estos proyectos se encuentras repartidos por toda la orografía española, oeste de
+                                europea y norte de África.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <div class="bg-blue-600 text-white p-12">
+
+                <div class="container mx-auto">
+
+                    <div class="flex flex-wrap justify-between items-center">
+                        <div class="text-center lg:text-left w-full mb-6 lg:mb-0 lg:w-auto">
+                            <g-link to="/contact"><strong class="font-black text-lg md:text-3xl">¿Buscas un profesional
+                                para tu reforma? </strong></g-link>
+                        </div>
+                        <div class="text-center lg:text-right w-full md:w-auto">
+                            <g-link class="inline-block bg-white text-blue-600 py-2 px-5 text-base rounded-full hover:shadow-lg"
+                                    to="/conocenos">Contactar
+                            </g-link>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="bg-white py-24 px-12">
+
+                <div class="max-w-xl mx-auto text-center">
+                    <h2 class="mb-2 font-black text-xl lg:text-3xl text-gray-900">Trabajos realizados por <br/> Grupo
+                        Apimosa</h2>
+                    <g-link to="/galleries/">
+                        <h3 class="mb-6 text-base lg:text-lg text-gray-700 max-w-xl hover:text-gray-400">Esto son
+                            algunos trabajos, lista completa disponible aqui
+                            <span class="text-base p-2 ">&#8594;</span>
+                        </h3>
+                    </g-link>
+                </div>
+
+                <div class="conatiner mx-auto">
+
+                    <div class="flex flex-wrap">
+
+                        <div class="w-full lg:w-1/3 p-4">
+                            <span class="block w-full h-full relative rounded-lg overflow-hidden shadow-lg">
+                                <g-image src="../assets/img/Alamillo.jpg"/>
+                                <div class="absolute left-0 top-0 w-full h-full bg-black opacity-50"></div>
+                                <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                                    <div class="p-6 py-8 text-center max-w-xs relative">
+
+                                        <div class="relative z-10">
+                                            <h4 class="mb-2 font-display text-lg text-white">Puente del Alamillo</h4>
+                                            <h5 class="mb-4 font-condensed text-xs text-white px-4"></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+
+                        <div class="w-full lg:w-1/3 p-4">
+                            <span  class="block w-full h-full relative rounded-lg overflow-hidden shadow-lg">
+                                <g-image
+                                        src="../assets/img/ciudad.jpg"
+                                        fit="cover"
+                                        class="w-full h-full"
+                                />
+                                <div class="absolute left-0 top-0 w-full h-full bg-black opacity-50"></div>
+                                <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                                    <div class="p-6 py-8 text-center max-w-xs relative">
+
+                                        <div class="relative z-10">
+                                            <h4 class="mb-2 font-display text-lg text-white">Ciudad de las Artes y las
+                                                Ciencias</h4>
+                                            <h5 class="mb-4 font-condensed text-xs text-white px-4"></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+
+                        <div class="w-full lg:w-1/3 p-4">
+                            <span  class="block w-full h-full relative rounded-lg overflow-hidden shadow-lg">
+                                <g-image
+                                        src="../assets/img/tenerife.jpg"
+                                        fit="cover"
+                                        class="w-full h-full"
+                                />
+                                <div class="absolute left-0 top-0 w-full h-full bg-black opacity-50"></div>
+                                <div class="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                                    <div class="p-6 py-8 text-center max-w-xs relative">
+
+                                        <div class="relative z-10">
+                                            <h4 class="mb-2 font-display text-lg text-white">Rencinto Ferial de Santa
+                                                Cruz de Tenerife</h4>
+                                            <h5 class="mb-4 font-condensed text-xs text-white px-4"></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
     </Layout>
 </template>
 
@@ -592,6 +248,13 @@
 
 <style scoped>
 
+    .apimosa__popups {
+        font-style: italic;
+    }
+
+    .j-self {
+        justify-self: center;
+    }
 
 </style>
 
