@@ -1,52 +1,152 @@
 <template>
     <Layout>
-        <form class="w-full max-w-lg" name="contact" method="POST" data-netlify="true">
-            <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full px-3">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                        Nombre
-                    </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="nick" type="text">
-                    <p class="text-gray-600 text-xs italic">Remove if not needed</p>
-                </div>
-            </div>
-            <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full px-3">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                        E-mail
-                    </label>
-                    <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="email" type="email">
-                    <p class="text-gray-600 text-xs italic">Some tips - as long as needed</p>
-                </div>
-            </div>
-            <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full px-3">
-                    <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-password">
-                        Message
-                    </label>
-                    <textarea class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none" id="message"></textarea>
-                    <p class="text-gray-600 text-xs italic">Re-size can be disabled by set by resize-none / resize-y / resize-x / resize</p>
-                </div>
-            </div>
-            <div class="md:flex md:items-center">
-                <div class="md:w-1/3">
-                    <button class="shadow bg-teal-400 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button">
-                        Send
-                    </button>
-                </div>
-                <div class="md:w-2/3"></div>
-            </div>
-        </form>
+        <div class="mainForm relative">
+            <h6 class="formTitle">CONTACT US</h6>
+            <article>
+                <form class="w-full max-w-lg"
+                      name="contact"
+                      action="https://www.form-data.com/_functions/submit/zsu0pbfwbpdw78cd142thc"
+                      method="post"
+                >
+
+                    <input required type="text" v-model="name" name="name" placeholder="Nombre"/>
+
+
+                    <input required type="email" v-model="email" name="email" placeholder="Email"/>
+
+
+                    <textarea required name="message" v-model="message" placeholder="Tu mensaje"></textarea>
+
+                    <vue-recaptcha
+                            class="absolute top-0"
+                            ref="recaptcha"
+                            :loadRecaptchaScript="true"
+                            @verify="onVerify" sitekey="6LeH4P4UAAAAAJIi9kHto4NOlrkaSD2_kfRIRobH">
+                    </vue-recaptcha>
+
+                    <button type="submit">Send</button>
+
+                </form>
+            </article>
+            <button>Send Message</button>
+        </div>
     </Layout>
 
 </template>
 
 <script>
+
+    import VueRecaptcha from 'vue-recaptcha'
+
     export default {
-        name: "contact"
+        name: "contact",
+        data() {
+            return {
+                form: {
+                    robot: false
+                }
+            }
+        },
+        methods: {
+            submit: function () {
+                if (this.form.robot) {
+
+                }
+            },
+            onVerify: function (response) {
+                if (response) this.form.robot = true;
+            }
+        },
+        components: {
+            VueRecaptcha
+        },
     }
 </script>
 
 <style scoped>
+    .mainForm {
+        height: 550px;
+        width: 300px;
+        background: linear-gradient(#1a4871, #4783a4, #4783a4);
+        margin: auto;
+        margin-top: 100px;
+        box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.4);
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 2rem;
+    }
 
+    article {
+        height: 450px;
+        width: 650px;
+        margin-left: -170px;
+        background: linear-gradient(to left, #1b4e65, #1b4f66, #1c5169);
+        display: block;
+        margin-top: 200px;
+        border-radius: 50%;
+    }
+
+    .formTitle {
+        font-size: 30px;
+        color: #fff;
+        font-family: sans-serif;
+        font-weight: 100;
+        margin-top: 100px;
+        position: absolute;
+        margin-left: 55px;
+        text-align: center;
+        animation: glow 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 0px #fff;
+        }
+
+        to {
+            text-shadow: 0 0 20px #fff;
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 195px;
+        margin-top: 70px;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding-left: 2px;
+        margin-top: 15px;
+        background: transparent;
+        border: none;
+        height: 40px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    ::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+        opacity: 1;
+    }
+
+    button {
+        height: 55px;
+        font-size: 20px;
+        margin-top: 66px;
+        letter-spacing: 1px;
+        width: 300px;
+        border: none;
+        color: white;
+        background: #48cede;
+    }
+
+    input:target {
+        background: transparent;
+    }
 </style>

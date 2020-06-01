@@ -140,7 +140,7 @@
                         </div>
                         <div class="text-center lg:text-right w-full md:w-auto">
                             <g-link class="inline-block bg-white text-blue-600 py-2 px-5 text-base rounded-full hover:shadow-lg"
-                                    to="/conocenos">Contactar
+                                    to="/contact">Contactar
                             </g-link>
                         </div>
                     </div>

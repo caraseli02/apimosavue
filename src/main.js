@@ -6,6 +6,10 @@ import DefaultLayout from "~/layouts/Default.vue";
 export default function (Vue, {router, head, isClient, isServer}) {
     // Set default layout as a global component
     Vue.component("Layout", DefaultLayout);
+    // Add an external Javascript before the closing </body> tag
+/*    head.script.push({
+        src: 'https://www.google.com/recaptcha/api.js',
+    })*/
     head.link.push({
         rel: "stylesheet",
         href:
