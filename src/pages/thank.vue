@@ -2,7 +2,7 @@
     <Layout>
         <section class="w-full m-0 md:m-4 flex justify-center items-center">
             <div class="max-w-sm rounded overflow-hidden shadow-lg">
-                <g-image class="w-full" src="../assets/img/work1.jpg" alt="apimosa grup"/>
+                <g-image class="w-full" src="../assets/images/work1.jpg" alt="apimosa grup"/>
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">Gracias por confiar en Apimosa</div>
                     <p class="text-gray-700 text-base">

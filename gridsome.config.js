@@ -6,16 +6,27 @@
 // const contentful = require("./plugin.confentful");
 
 module.exports = {
-    chainWebpack: config => config.mode("development"),
+    chainWebpack: config => {
+        config.resolve.alias.set('@images', '@/assets/images')
+        config.mode("development")
+    },
     siteName: "Apimosa",
-    siteDescription: "Pinturas y Recubrimientos",
+    siteDescription: "Pinturas especiales y patologías del acero y hormigón",
     siteUrl: "",
     icon: {
         favicon: "./src/assets/icons/android-icon-96x96.png", // 96x96
         touchicon: "./src/assets/icons/apple-icon-180x180.png" // 180x180
     },
     plugins: [
-        // contentful,
+        {
+            use: 'gridsome-plugin-nprogress',
+            options: {
+                // Setting a color is optional.
+                color: '#ffffff',
+                // Disable the loading spinner.
+                showSpinner: true,
+            }
+        },
         {
             use: 'gridsome-plugin-tailwindcss',
             /**
@@ -50,6 +61,5 @@ module.exports = {
         }
     ],
     templates: {
-
     }
 };

@@ -1,12 +1,10 @@
 <template>
-    <header class=" relative px-8 py-4 bg-white flex flex-wrap items-center bg-blue-900 xs:mb-1">
+    <header class="fixed w-full z-40 top-0 px-4 py-2 bg-white flex flex-wrap items-center bg-blue-900 xs:mb-5">
         <div class=" h-full flex-1 flex justify-between items-center">
-            <g-link to="/" class="home-link"
-            >
+            <g-link to="/" class="home-link">
                 <Logo/>
             </g-link>
         </div>
-
         <label for="menu-toggle" class="cursor-pointer md:hidden block p-3 bg-blue-900">
             <svg class="fill-current text-gray-900 m-2"
                  xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
@@ -19,15 +17,32 @@
         <div class="hidden md:flex md:items-center md:w-auto w-full" id="menu">
             <nav>
                 <ul class="md:flex items-center justify-between text-base text-gray-700">
-                    <li class="flex justify-center items-center"><g-link class="hover:text-gray-400 text-white rounded-lg md:p-4 p-3 block " to="/blog">Servicios</g-link></li>
-                    <li class="flex justify-center items-center"><g-link class="hover:text-gray-400 text-white rounded-lg md:p-4 p-3 block" to="/galleries/">Trabajos</g-link></li>
-<!--                    <li class="flex justify-center items-center"><g-link class="hover:text-gray-400 text-white rounded-lg md:p-4 p-3 block" to="/conocenos">Conócenos</g-link></li>-->
-                    <li class="flex justify-center items-center"><g-link class="hover:text-gray-400 text-white rounded-lg md:p-4 p-3 block" to="/contact">Contact</g-link></li>
+                    <li
+                            v-for="(link, index) in links" :key="index"
+                            class="flex justify-center items-center"
+                    >
+                        <g-link class="transition duration-500 ease-in-out  hover:bg-blue-500 transform hover:-translate-y-1 hover:scale-110
+                         text-white rounded-lg md:p-4 p-3 block capitalize" :to="link">
+                            {{link}}
+                        </g-link>
+                    </li>
                 </ul>
             </nav>
         </div>
-        <div class="absolute bottom-0 right-0 -mb-5 mr-5 flex z-10">
-            <a href="tel:+34954-143-950" class="bg-white text-black py-2 px-4 text-xs md:text-sm rounded-full hover:shadow-lg"><span> &#9742; </span>954143950</a>
+        <div class="absolute bottom-0 right-0 -mb-10 mr-3 flex z-10">
+            <a class="shadow ml-2 bg-white text-black py-2 px-2 text-xs md:text-sm rounded-full hover:shadow-lg"
+               href="https://wa.me/34615-240-662"><img src="../assets/icons/whatsapp.svg" height="32" width="32"
+                                                       alt="whatsapp"/></a>
+            <a href="mailto:apimosa@apimosa.es"
+               class="blockHover shadow flex justify-center items-center ml-2 bg-white text-black py-2 px-2 text-xs md:text-sm rounded-full hover:shadow-lg">
+                <img src="../assets/icons/gmail.svg" height="32" width="32" alt="gmail"/>
+                <span class="hidden ml-2">apimosa@apimosa.es</span>
+            </a>
+            <a href="tel:+34954-143-950"
+               class="blockHover shadow flex justify-center items-center ml-2 bg-white text-black py-2 px-2 text-xs md:text-sm rounded-full hover:shadow-lg">
+                <img src="../assets/icons/call.svg" height="32" width="32" alt="telefone"/>
+                <span class="hidden ml-2">954143950</span>
+            </a>
         </div>
     </header>
 </template>
@@ -38,7 +53,16 @@
     export default {
         components: {
             Logo
-        }
+        },
+        data() {
+            return {
+                links: [
+                    "servicios",
+                    "trabajos",
+                    "contact"
+                ]
+            }
+        },
     };
 </script>
 
@@ -51,12 +75,31 @@
         margin: 0 auto;
     }
 
+    .blockHover span{
+        display: none;
+        transition: display 1s ease-in;
+    }
+
+    .blockHover:hover span {
+        display: inline-block;
+
+    }
+
+    @keyframes display {
+        from {
+            display: none
+        }
+        to {
+            display: inline-block
+        }
+    }
+
 </style>
 
 <static-query>
     query {
-    metadata {
-    siteName
-    }
+        metadata {
+            siteName
+        }
     }
 </static-query>

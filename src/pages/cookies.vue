@@ -124,11 +124,13 @@
 </script>
 
 <style scoped>
+
     .legal {
         margin: 2%;
+        margin-top: 137px;
     }
     .legal > h1 , h2 , h3 {
-       font-size: 2rem;
+        font-size: 2rem;
         text-align: center;
         width: 100%;
         margin-bottom: 0.5rem;
@@ -138,4 +140,5 @@
         font-size: 1.2rem;
         margin: 0.5rem;
     }
+
 </style>
