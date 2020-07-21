@@ -24,7 +24,7 @@
                 </div>
                 <div class="md:w-1/4 flex flex-col mb-12 md:mb-0">
                     <h4 class="flex justify-center font-condensed pb-4">
-                        <g-link to="/blog/"
+                        <g-link to="/servicios/"
                                 class="inline-block bg-white font-condensed text-primary py-2 px-5 text-base rounded-full hover:shadow-lg hover:bg-blue-600 hover:text-white"
                         >
                             Servicios

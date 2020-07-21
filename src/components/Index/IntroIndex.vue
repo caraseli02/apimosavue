@@ -3,7 +3,10 @@
 
         <div class="w-full h-full relative flex items-center justify-center py-24">
 
-            <youtube :video-id="videoId" player-width="750" player-height="750" :player-vars="{autoplay: 1}"></youtube>
+            <g-image src="@/assets/images/work1.jpg"
+                     class="absolute top-0 left-0 w-full h-full object-cover opacity-50"
+            />
+<!--            <video-embed width="400px" :params="{autoplay: 1}" src="https://www.youtube.com/watch?v=s4ObxcdXoFE"></video-embed>-->
             <div class="px-6 mt-5 max-w-4xl relative z-10 text-center">
                 <h1 class="text-3xl md:text-4xl font-black text-white leading-tight mb-2">Grupo Apimosa</h1>
                 <h2 class="text-lg md:text-2xl font-condensed text-white leading-tight mb-8">

@@ -2,17 +2,13 @@ import Vue from "vue";
 import Vuex from 'vuex'
 import * as services from './modules/services.js'
 import * as works from './modules/works.js'
-import VueYouTubeEmbed from 'vue-youtube-embed'
-
+import Embed from 'v-video-embed'
 import DefaultLayout from "~/layouts/Default.vue";
 
 export default function (Vue, {router, head, isClient, isServer, appOptions}) {
-
+    Vue.use(Embed);
     //VUEX INTEGRATION
-
     Vue.use(Vuex)
-// if you don't want install the component globally
-    Vue.use(VueYouTubeEmbed)
 
     appOptions.store = new Vuex.Store({
         modules: {

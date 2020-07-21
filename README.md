@@ -1,4 +1,4 @@
-# Gridsome Contentful example
+# Gridsome basic webpage example
 
 
 ## Gridsome
@@ -10,8 +10,5 @@ Gridsome does some out-of-the-box magic for you, especially routing and resolvin
 - [Content nodes](https://gridsome.org/docs/templates/) (this is how Gridsome defines an item in a collection) will go in the `/templates` folder. Because we're passing some parameters, we need to connect the routes, params and templates in a `gridsome.config.js` file, which I'll explain in a bit.
 - All [reusable components](https://gridsome.org/docs/components/) go (you guessed it) in the `/components` folder. Just like any Vue application!
 
-
-## Forms
-
-The form is designed to make use of the Netlify Forms functionality. It's basically the implementation that Gridsome and Netlify advise to use, with some basic feedback for the user. These submissions will end up in your Netlify dashboard. In the dashboard, you have the option to add [outgoing notifications](https://docs.netlify.com/forms/setup/#notifications) to Slack, a webhook or send an email.
+````
 
