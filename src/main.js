@@ -72,7 +72,7 @@ export default function (Vue, {router, head, isClient, isServer, appOptions}) {
         {name: 'robots', content: 'index,follow'},
         {
             property: 'twitter:description',
-            content: 'My blog will give you an idea of ​​my daily fashion adventures. It is also a way to share some of my favorite things in life, fashion, inspiration, beauty tips and style.'
+            content: 'Ingenieria | Protección Anticorrosiva | Preparación de Superficies | Protecciones Pasiva | Pavimentos Industriales | Impermeabilizaciones | Inyecciones.'
         },
         {
             property: 'twitter:title',
