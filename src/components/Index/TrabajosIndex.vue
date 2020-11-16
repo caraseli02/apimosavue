@@ -1,7 +1,6 @@
 <template>
-    <div class="bg-white md:py-24 md:px-12 py-12 px-6">
-
-        <div class="max-w-xl mx-auto text-center">
+    <div class=" bg-white md:py-24 md:px-12 py-12 px-6">
+        <div class="max-w-xl mx-auto text-center py-6 relative">
             <h2 class="mb-2 font-black text-xl lg:text-3xl text-gray-900">Trabajos realizados por <br/> Grupo
                 Apimosa</h2>
             <g-link to="/trabajos/">
@@ -11,13 +10,19 @@
                     >Trabajos</span>
                 </h3>
             </g-link>
+          <IconScroll>
+            <div class="lg:hidden mouse absolute transform -translate-x-40 left-0 bottom-0 z-40"></div>
+          </IconScroll>
         </div>
 
-        <div class="conatiner mx-auto">
-            <div class="flex flex-wrap relative">
+        <div class="conatiner  mx-auto overflow-scroll">
+            <div class="grid grid-flow-col auto-cols-max lg:auto-cols-auto gap-4">
                 <div
-                        class="md:w-1/2 lg:w-1/3 py-2 px-2 md:py-4 md:px-4"
+                        class="max-w-xs min-w-full"
                         v-for="(work, index) in works" :key="index"
+                        data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000"
                 >
                     <div>
                         <div
@@ -26,6 +31,7 @@
                             <div
                                     class="right-0 mt-4 rounded-l-full absolute text-center font-bold text-xs text-white px-2 py-1 bg-orange-500"
                                     v-for="(service, index) in work.services" :key="index"
+                                    data-aos="fade-left"
                             >
                                 {{service}}
                             </div>
@@ -38,7 +44,7 @@
                             <div class="flex justify-center">
 
                             </div>
-                            <div class="py-2 px-2 vh20 flex flex-col justify-center items-center">
+                            <div class="py-2 px-2 h-40 flex flex-col justify-center items-center">
                                 <div class=" font-bold font-title text-center">
                                     {{work.title}}
                                 </div>
@@ -52,16 +58,16 @@
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
 <script>
-    import {mapState} from 'vuex'
+    import IconScroll from "../utils/iconScroll";
 
     export default {
         name: "TrabajosIndex",
-        data() {
+      components: {IconScroll},
+      data() {
             return {
                 works: [
                     {

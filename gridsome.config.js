@@ -13,6 +13,7 @@ module.exports = {
     siteName: "Apimosa",
     siteDescription: "Pinturas especiales y patologías del acero y hormigón",
     siteUrl: "",
+    outputDir: "html",
     icon: {
         favicon: "./src/assets/icons/android-icon-96x96.png", // 96x96
         touchicon: "./src/assets/icons/apple-icon-180x180.png" // 180x180
@@ -51,15 +52,19 @@ module.exports = {
 
         },
         {
-            use: 'gridsome-plugin-nprogress',
+            use: 'gridsome-plugin-purgecss',
+            // default options, the following will be included if you don't provide anything
             options: {
-                // Setting a color is optional.
-                color: '#0366d6',
-                // Disable the loading spinner.
-                showSpinner: false,
+                content: [
+                    './src/**/*.vue',
+                    './src/**/*.js',
+                    './src/**/*.jsx',
+                    './src/**/*.pug',
+                    './src/**/*.md'
+                ],
+                defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
             }
         }
     ],
-    templates: {
-    }
+    templates: {}
 };

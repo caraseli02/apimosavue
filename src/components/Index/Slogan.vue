@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-blue-600 text-white p-12">
+    <div class="setBg text-white p-12">
         <div class="container mx-auto">
             <div class="flex flex-wrap justify-between items-center">
                 <div class="text-center lg:text-right w-full md:w-auto">
@@ -36,5 +36,7 @@
 </script>
 
 <style scoped>
-
+.setBg{
+  background-color: #122C6F;
+}
 </style>

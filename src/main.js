@@ -2,14 +2,18 @@ import Vue from "vue";
 import Vuex from 'vuex'
 import * as services from './modules/services.js'
 import * as works from './modules/works.js'
-import Embed from 'v-video-embed'
 import DefaultLayout from "~/layouts/Default.vue";
+/*Add AOS ANIMATION*/
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default function (Vue, {router, head, isClient, isServer, appOptions}) {
-    Vue.use(Embed);
     //VUEX INTEGRATION
     Vue.use(Vuex)
-
+    /*AOS INIT*/
+    if (process.isClient) {
+        AOS.init()
+    }
     appOptions.store = new Vuex.Store({
         modules: {
             services,
