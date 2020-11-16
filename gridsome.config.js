@@ -13,7 +13,6 @@ module.exports = {
     siteName: "Apimosa",
     siteDescription: "Pinturas especiales y patologías del acero y hormigón",
     siteUrl: "",
-    outputDir: "html",
     icon: {
         favicon: "./src/assets/icons/android-icon-96x96.png", // 96x96
         touchicon: "./src/assets/icons/apple-icon-180x180.png" // 180x180

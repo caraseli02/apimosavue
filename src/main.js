@@ -7,7 +7,7 @@ import DefaultLayout from "~/layouts/Default.vue";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-export default function (Vue, {router, head, isClient, isServer, appOptions}) {
+export default function (Vue, {router, head, isClient, isServer, appOptions, process}) {
     //VUEX INTEGRATION
     Vue.use(Vuex)
     /*AOS INIT*/
